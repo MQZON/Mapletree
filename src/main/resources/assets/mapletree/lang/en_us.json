@@ -1,4 +1,6 @@
 {
   "item.mapletree.syrup_bottle": "Syrup Bottle",
-  "item.mapletree.sap_bucket": "Sap Bucket"
+  "item.mapletree.sap_bucket": "Sap Bucket",
+
+  "block.mapletree.maple_leaves": "Maple Leaves"
 }
