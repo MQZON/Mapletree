@@ -49,6 +49,7 @@ public class Mapletree
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SYRUP_BOTTLE);
+            event.accept(ModItems.SAP_BUCKET);
         }
     }
 

@@ -13,6 +13,10 @@ public class ModItems {
     public static final RegistryObject<Item> SYRUP_BOTTLE = ITEMS.register("syrup_bottle",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> SAP_BUCKET = ITEMS.register("sap_bucket",
+            () -> new Item(new Item.Properties()));
+
+
     public static  void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
