@@ -55,6 +55,11 @@ public class Mapletree
         }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.MAPLE_LEAVES);
+            event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
+            event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
+            event.accept(ModBlocks.MAPLE_PLANKS);
+            event.accept(ModBlocks.MAPLE_SAPLING);
         }
     }
 
