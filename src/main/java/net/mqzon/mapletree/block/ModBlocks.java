@@ -76,6 +76,13 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.MAPLE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
