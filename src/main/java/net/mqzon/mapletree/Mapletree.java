@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModCreativeModeTabs;
 import net.mqzon.mapletree.item.ModItems;
 import org.slf4j.Logger;
 
@@ -31,6 +32,7 @@ public class Mapletree
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -57,16 +59,17 @@ public class Mapletree
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.SYRUP_BOTTLE);
             event.accept(ModItems.SAP_BUCKET);
+            event.accept(ModItems.SYRUP_BOTTLE);
         }
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.MAPLE_SAPLING);
             event.accept(ModBlocks.MAPLE_LEAVES);
             event.accept(ModBlocks.MAPLE_LOG);
+            event.accept(ModBlocks.MAPLE_WOOD);
             event.accept(ModBlocks.STRIPPED_MAPLE_LOG);
             event.accept(ModBlocks.STRIPPED_MAPLE_WOOD);
             event.accept(ModBlocks.MAPLE_PLANKS);
-            event.accept(ModBlocks.MAPLE_SAPLING);
         }
     }
 
