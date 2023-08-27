@@ -27,6 +27,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.STRIPPED_MAPLE_WOOD.get());
                         pOutput.accept(ModBlocks.MAPLE_PLANKS.get());
 
+                        pOutput.accept(ModBlocks.MAPLE_STAIRS.get());
+                        pOutput.accept(ModBlocks.MAPLE_SLAB.get());
+                        pOutput.accept(ModBlocks.MAPLE_FENCE.get());
+                        pOutput.accept(ModBlocks.MAPLE_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.MAPLE_DOOR.get());
+                        pOutput.accept(ModBlocks.MAPLE_TRAPDOOR.get());
+                        pOutput.accept(ModBlocks.MAPLE_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.MAPLE_BUTTON.get());
+
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());
                     })).build());
