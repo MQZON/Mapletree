@@ -16,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
 import net.mqzon.mapletree.block.custom.ModFlammableRotatedPillarBlock;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.worldgen.tree.MapleTreeGrower;
@@ -31,23 +32,8 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.MAPLE_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE))
-            {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;
-                }
-
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;
-                }
-
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;
-                }
-            });
+            () -> new MapleLeavesBlock(BlockBehaviour.Properties.copy(
+                    Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE).randomTicks()));
     public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> MAPLE_WOOD = registerBlock("maple_wood",

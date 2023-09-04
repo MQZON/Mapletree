@@ -17,6 +17,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.item.ModCreativeModeTabs;
 import net.mqzon.mapletree.item.ModItems;
+import net.mqzon.mapletree.particle.ModParticles;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -33,6 +34,7 @@ public class Mapletree
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
+        ModParticles.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
