@@ -10,11 +10,11 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.worldgen.foliage.custom.MapleFoliagePlacer;
 
 public class ModConfiguredFeatures {
 
@@ -25,7 +25,11 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()),
                 new StraightTrunkPlacer(7,2,0),
                 BlockStateProvider.simple(ModBlocks.MAPLE_LEAVES.get()),
-                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                new MapleFoliagePlacer(
+                        ConstantInt.of(4), //radius
+                        ConstantInt.of(2), //offset
+                        ConstantInt.of(7), //height
+                        0.75F, 0.75F),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
     }

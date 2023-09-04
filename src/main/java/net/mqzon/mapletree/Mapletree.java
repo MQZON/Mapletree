@@ -18,6 +18,7 @@ import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.item.ModCreativeModeTabs;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;
+import net.mqzon.mapletree.worldgen.foliage.ModFoliagePlacers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -35,6 +36,7 @@ public class Mapletree
 
         ModCreativeModeTabs.register(modEventBus);
         ModParticles.register(modEventBus);
+        ModFoliagePlacers.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
