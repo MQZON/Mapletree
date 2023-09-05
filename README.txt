@@ -1,4 +1,4 @@
-![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
+![Mapletree](https://github.com/MQZON/Mapletree/tree/master/images/Mapletree_preview.png?raw=true)
 
 
 Source installation information for modders
