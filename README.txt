@@ -1,3 +1,5 @@
+![Mapletree](images/Mapletree_preview.png)
+
 
 Source installation information for modders
 -------------------------------------------
