@@ -8,8 +8,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -64,24 +62,24 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> MAPLE_STAIRS = registerBlock("maple_stairs",
-            () -> new StairBlock(ModBlocks.MAPLE_PLANKS.get().defaultBlockState(),
+            () -> new StairBlock(() -> ModBlocks.MAPLE_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> MAPLE_SLAB = registerBlock("maple_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
     public static final RegistryObject<Block> MAPLE_FENCE = registerBlock("maple_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), WoodType.OAK));
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), ModWoodTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_DOOR = registerBlock("maple_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), ModBlockSetTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), ModBlockSetTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
-                    BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), ModBlockSetTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_BUTTON = registerBlock("maple_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
-                    BlockSetType.OAK, 15, true));
+                    ModBlockSetTypes.MAPLE, 15, true));
     public static final RegistryObject<Block> MAPLE_SIGN = registerBlockWithoutBlockItem("maple_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_WALL_SIGN = registerBlockWithoutBlockItem("maple_wall_sign",
@@ -98,8 +96,8 @@ public class ModBlocks {
         return toReturn;
     }
 
-    public static <T extends Block> RegistryObject<Item> registerBlockitem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    public static <T extends Block> void registerBlockitem(String name, RegistryObject<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
