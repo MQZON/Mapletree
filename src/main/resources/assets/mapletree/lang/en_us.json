@@ -20,5 +20,6 @@
   "block.mapletree.maple_door": "Maple Door",
   "block.mapletree.maple_trapdoor": "Maple Trapdoor",
   "block.mapletree.maple_pressure_plate": "Maple Pressure Plate",
-  "block.mapletree.maple_button": "Maple Button"
+  "block.mapletree.maple_button": "Maple Button",
+  "block.mapletree.maple_sign": "Maple Sign"
 }

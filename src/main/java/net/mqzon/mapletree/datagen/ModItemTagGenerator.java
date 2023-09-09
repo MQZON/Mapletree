@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -49,5 +50,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.WOODEN_STAIRS).add(ModBlocks.MAPLE_STAIRS.get().asItem());
         this.tag(ItemTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE.get().asItem());
         this.tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get().asItem());
+
+        this.tag(ItemTags.SIGNS).add(ModItems.MAPLE_SIGN.get());
     }
 }

@@ -69,6 +69,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.MAPLE_PRESSURE_PLATE.get()), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
         buttonBlock(((ButtonBlock) ModBlocks.MAPLE_BUTTON.get()), blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+
+        signBlock((StandingSignBlock) ModBlocks.MAPLE_SIGN.get(), (WallSignBlock) ModBlocks.MAPLE_WALL_SIGN.get(),
+                blockTexture(ModBlocks.MAPLE_PLANKS.get()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

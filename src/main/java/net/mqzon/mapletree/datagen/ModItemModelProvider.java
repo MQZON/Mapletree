@@ -34,25 +34,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.MAPLE_FENCE, ModBlocks.MAPLE_PLANKS);
         trapdoorItem(ModBlocks.MAPLE_TRAPDOOR);
         buttonItem(ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS);
+
+        simpleItem(ModItems.MAPLE_SIGN);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Mapletree.MOD_ID, "block/"+item.getId().getPath()));
+                new ResourceLocation(Mapletree.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Mapletree.MOD_ID, "item/"+item.getId().getPath()));
+                new ResourceLocation(Mapletree.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Mapletree.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(Mapletree.MOD_ID, "item/" + item.getId().getPath()));
     }
+
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
         this.withExistingParent(Mapletree.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
@@ -65,11 +68,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(Mapletree.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", new ResourceLocation(Mapletree.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(Mapletree.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", new ResourceLocation(Mapletree.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 }

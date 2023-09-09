@@ -36,6 +36,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.MAPLE_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.MAPLE_BUTTON.get());
 
+                        pOutput.accept(ModItems.MAPLE_SIGN.get());
+
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());
                     })).build());

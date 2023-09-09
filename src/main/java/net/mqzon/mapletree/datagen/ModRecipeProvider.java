@@ -5,6 +5,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModItems;
 
 import java.util.function.Consumer;
 
@@ -35,6 +36,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         pressurePlateBuilder(RecipeCategory.REDSTONE, ModBlocks.MAPLE_PRESSURE_PLATE.get(), ingredient_maple_planks)
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         buttonBuilder(ModBlocks.MAPLE_BUTTON.get(), ingredient_maple_planks)
+                .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
+        signBuilder(ModItems.MAPLE_SIGN.get(), ingredient_maple_planks)
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
     }
 }

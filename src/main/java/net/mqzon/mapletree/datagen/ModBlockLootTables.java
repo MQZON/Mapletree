@@ -31,16 +31,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.MAPLE_STAIRS.get());
-        this.dropSelf(ModBlocks.MAPLE_BUTTON.get());
-        this.dropSelf(ModBlocks.MAPLE_PRESSURE_PLATE.get());
-        this.dropSelf(ModBlocks.MAPLE_TRAPDOOR.get());
         this.dropSelf(ModBlocks.MAPLE_FENCE.get());
         this.dropSelf(ModBlocks.MAPLE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.MAPLE_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MAPLE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MAPLE_BUTTON.get());
 
         this.add(ModBlocks.MAPLE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.MAPLE_SLAB.get()));
         this.add(ModBlocks.MAPLE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.MAPLE_DOOR.get()));
+
+        this.dropSelf(ModBlocks.MAPLE_SIGN.get());
+        this.dropSelf(ModBlocks.MAPLE_WALL_SIGN.get());
     }
 
     @Override

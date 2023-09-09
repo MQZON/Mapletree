@@ -58,6 +58,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.MAPLE_STAIRS.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get());
 
+        this.tag(BlockTags.ALL_SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get());
+        this.tag(BlockTags.SIGNS).add(ModBlocks.MAPLE_SIGN.get());
+        this.tag(BlockTags.STANDING_SIGNS).add(ModBlocks.MAPLE_SIGN.get());
+        this.tag(BlockTags.WALL_SIGNS).add(ModBlocks.MAPLE_WALL_SIGN.get());
+
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.MAPLE_LEAVES.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(
@@ -73,7 +78,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MAPLE_DOOR.get(),
                 ModBlocks.MAPLE_TRAPDOOR.get(),
                 ModBlocks.MAPLE_PRESSURE_PLATE.get(),
-                ModBlocks.MAPLE_BUTTON.get()
+                ModBlocks.MAPLE_BUTTON.get(),
+                ModBlocks.MAPLE_SIGN.get(),
+                ModBlocks.MAPLE_WALL_SIGN.get()
         );
     }
 }
