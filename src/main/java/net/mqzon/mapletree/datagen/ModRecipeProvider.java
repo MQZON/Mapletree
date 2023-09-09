@@ -22,22 +22,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         planksFromLogs(consumer, ModBlocks.MAPLE_PLANKS.get(), ModItemTagGenerator.MAPLE_LOGS, 4);
 
         stairBuilder(ModBlocks.MAPLE_STAIRS.get(), ingredient_maple_planks)
+                .group("wooden_stairs")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_SLAB.get(), ingredient_maple_planks)
+                .group("wooden_slab")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         fenceBuilder(ModBlocks.MAPLE_FENCE.get(), ingredient_maple_planks)
+                .group("wooden_fence")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         fenceGateBuilder(ModBlocks.MAPLE_FENCE_GATE.get(), ingredient_maple_planks)
+                .group("wooden_fence_gate")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         doorBuilder(ModBlocks.MAPLE_DOOR.get(), ingredient_maple_planks)
+                .group("wooden_door")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         trapdoorBuilder(ModBlocks.MAPLE_TRAPDOOR.get(), ingredient_maple_planks)
+                .group("wooden_trapdoor")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         pressurePlateBuilder(RecipeCategory.REDSTONE, ModBlocks.MAPLE_PRESSURE_PLATE.get(), ingredient_maple_planks)
+                .group("wooden_pressure_plate")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         buttonBuilder(ModBlocks.MAPLE_BUTTON.get(), ingredient_maple_planks)
+                .group("wooden_button")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
         signBuilder(ModItems.MAPLE_SIGN.get(), ingredient_maple_planks)
+                .group("wooden_sign")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
     }
 }
