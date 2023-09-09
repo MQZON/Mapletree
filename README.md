@@ -1,3 +1,9 @@
+This mod adds a maple tree to minecraft. Currently maple trees spawn in plains biomes and can be used as a regular wood type for everything except boats and signs.
+
+
+**Preview**
+![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
+
 
 Source installation information for modders
 -------------------------------------------
