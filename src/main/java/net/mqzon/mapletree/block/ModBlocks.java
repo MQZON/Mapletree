@@ -2,6 +2,7 @@ package net.mqzon.mapletree.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -34,7 +35,10 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
             () -> new MapleLeavesBlock(BlockBehaviour.Properties.copy(
-                    Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE).randomTicks()));
+                    Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE)
+                    .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
+                    .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
+                    .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));
     public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> MAPLE_WOOD = registerBlock("maple_wood",
