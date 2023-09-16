@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.block.entity.custom.ModHangingSignBlockEntity;
 import net.mqzon.mapletree.block.entity.custom.ModSignBlockEntity;
 
 public class ModBlockEntities {
@@ -18,6 +19,13 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
                             ModBlocks.MAPLE_SIGN.get(),
                             ModBlocks.MAPLE_WALL_SIGN.get()
+                            ).build(null));
+
+    public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> HANGING_SIGN_BLOCK_ENTITIES =
+            BLOCK_ENTITIES.register("hanging_sign_block_entity", () ->
+                    BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
+                            ModBlocks.MAPLE_HANGING_SIGN.get(),
+                            ModBlocks.MAPLE_WALL_HANGING_SIGN.get()
                             ).build(null));
 
     public static void register(IEventBus eventBus) {

@@ -4,11 +4,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.block.custom.ModCeilingHangingSignBlock;
+import net.mqzon.mapletree.block.custom.ModWallHangingSignBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -72,6 +75,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         signBlock((StandingSignBlock) ModBlocks.MAPLE_SIGN.get(), (WallSignBlock) ModBlocks.MAPLE_WALL_SIGN.get(),
                 blockTexture(ModBlocks.MAPLE_PLANKS.get()));
+        hangingSignBlock((ModCeilingHangingSignBlock) ModBlocks.MAPLE_HANGING_SIGN.get(),
+                (ModWallHangingSignBlock) ModBlocks.MAPLE_WALL_HANGING_SIGN.get(),
+                new ResourceLocation(Mapletree.MOD_ID, "block/stripped_maple_log"));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -83,5 +89,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 models().cross(
                         ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
                         blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    public void hangingSignBlock(ModCeilingHangingSignBlock hangingSignBlock,
+                                 ModWallHangingSignBlock wallHangingSignBlock,
+                                 ResourceLocation particle_texture) {
+        ModelFile hangingSign = models().getExistingFile(particle_texture);
+        simpleBlock(hangingSignBlock, hangingSign);
+        simpleBlock(wallHangingSignBlock, hangingSign);
     }
 }

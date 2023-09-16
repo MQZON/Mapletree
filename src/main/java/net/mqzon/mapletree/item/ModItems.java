@@ -1,5 +1,6 @@
 package net.mqzon.mapletree.item;
 
+import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,11 @@ public class ModItems {
     public static final RegistryObject<Item> MAPLE_SIGN = ITEMS.register("maple_sign",
             () -> new SignItem(new Item.Properties().stacksTo(16),
                     ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> MAPLE_HANGING_SIGN = ITEMS.register("maple_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN.get(),
+                    ModBlocks.MAPLE_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> SYRUP_BOTTLE = ITEMS.register("syrup_bottle",
             () -> new Item(new Item.Properties()));

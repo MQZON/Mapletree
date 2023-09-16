@@ -44,6 +44,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.MAPLE_SIGN.get());
         this.dropSelf(ModBlocks.MAPLE_WALL_SIGN.get());
+        this.dropSelf(ModBlocks.MAPLE_HANGING_SIGN.get());
+        this.dropSelf(ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
     }
 
     @Override

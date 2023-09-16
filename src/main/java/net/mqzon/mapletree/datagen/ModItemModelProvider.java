@@ -36,6 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS);
 
         simpleItem(ModItems.MAPLE_SIGN);
+        simpleItem(ModItems.MAPLE_HANGING_SIGN);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

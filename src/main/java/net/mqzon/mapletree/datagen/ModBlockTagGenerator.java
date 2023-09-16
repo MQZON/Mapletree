@@ -16,10 +16,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagGenerator extends BlockTagsProvider {
+    public static final TagKey<Block> MAPLE_LOGS = TagKey.create(Registries.BLOCK, new ResourceLocation("mapletree:maple_logs"));
+
     public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, Mapletree.MOD_ID, existingFileHelper);
     }
-    public static final TagKey<Block> MAPLE_LOGS = TagKey.create(Registries.BLOCK, new ResourceLocation("mapletree:maple_logs"));
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
@@ -58,10 +59,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WOODEN_STAIRS).add(ModBlocks.MAPLE_STAIRS.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get());
 
-        this.tag(BlockTags.ALL_SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get());
-        this.tag(BlockTags.SIGNS).add(ModBlocks.MAPLE_SIGN.get());
         this.tag(BlockTags.STANDING_SIGNS).add(ModBlocks.MAPLE_SIGN.get());
         this.tag(BlockTags.WALL_SIGNS).add(ModBlocks.MAPLE_WALL_SIGN.get());
+        this.tag(BlockTags.SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get());
+        this.tag(BlockTags.CEILING_HANGING_SIGNS).add(ModBlocks.MAPLE_HANGING_SIGN.get());
+        this.tag(BlockTags.WALL_HANGING_SIGNS).add(ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
+        this.tag(BlockTags.ALL_HANGING_SIGNS).add(ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
+        this.tag(BlockTags.ALL_SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get(),
+                ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
 
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.MAPLE_LEAVES.get());
 
@@ -80,7 +85,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MAPLE_PRESSURE_PLATE.get(),
                 ModBlocks.MAPLE_BUTTON.get(),
                 ModBlocks.MAPLE_SIGN.get(),
-                ModBlocks.MAPLE_WALL_SIGN.get()
+                ModBlocks.MAPLE_WALL_SIGN.get(),
+                ModBlocks.MAPLE_HANGING_SIGN.get(),
+                ModBlocks.MAPLE_WALL_HANGING_SIGN.get()
         );
     }
 }

@@ -48,5 +48,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         signBuilder(ModItems.MAPLE_SIGN.get(), ingredient_maple_planks)
                 .group("wooden_sign")
                 .unlockedBy(getHasName(ModBlocks.MAPLE_PLANKS.get()), has(ModBlocks.MAPLE_PLANKS.get())).save(consumer);
+        hangingSign(consumer, ModItems.MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAPLE_LOG.get());
     }
 }

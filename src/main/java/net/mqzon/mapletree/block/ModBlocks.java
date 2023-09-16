@@ -2,7 +2,6 @@ package net.mqzon.mapletree.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -15,10 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.Mapletree;
-import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
-import net.mqzon.mapletree.block.custom.ModFlammableRotatedPillarBlock;
-import net.mqzon.mapletree.block.custom.ModStandingSignBlock;
-import net.mqzon.mapletree.block.custom.ModWallSignBlock;
+import net.mqzon.mapletree.block.custom.*;
 import net.mqzon.mapletree.block.entity.ModWoodTypes;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.worldgen.tree.MapleTreeGrower;
@@ -88,7 +84,10 @@ public class ModBlocks {
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_WALL_SIGN = registerBlockWithoutBlockItem("maple_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MAPLE));
-
+    public static final RegistryObject<Block> MAPLE_HANGING_SIGN = registerBlockWithoutBlockItem("maple_hanging_sign",
+            () -> new ModCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MAPLE));
+    public static final RegistryObject<Block> MAPLE_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("maple_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAPLE));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
