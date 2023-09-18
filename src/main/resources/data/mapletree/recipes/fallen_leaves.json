@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mapletree:maple_leaves"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "mapletree:fallen_leaves"
+  }
+}

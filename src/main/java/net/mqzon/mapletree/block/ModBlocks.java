@@ -2,6 +2,7 @@ package net.mqzon.mapletree.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -9,6 +10,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,10 +33,16 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
             () -> new MapleLeavesBlock(BlockBehaviour.Properties.copy(
-                    Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE)
-                    .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
-                    .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
-                    .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));
+                            Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE)
+                    .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> {
+                        return false;
+                    })
+                    .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> {
+                        return false;
+                    })
+                    .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> {
+                        return false;
+                    })));
     public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> MAPLE_WOOD = registerBlock("maple_wood",
@@ -88,6 +96,16 @@ public class ModBlocks {
             () -> new ModCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MAPLE));
     public static final RegistryObject<Block> MAPLE_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("maple_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAPLE));
+
+    public static final RegistryObject<Block> FALLEN_LEAVES = registerBlock("fallen_leaves",
+            () -> new LeafPileBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .sound(new ForgeSoundType(1.0F, 1.0F,
+                            () -> SoundEvents.GRASS_BREAK,
+                            () -> SoundEvents.GRASS_BREAK,
+                            () -> SoundEvents.GRASS_PLACE,
+                            () -> SoundEvents.GRASS_HIT,
+                            () -> SoundEvents.GRASS_BREAK))));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

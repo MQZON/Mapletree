@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    },
+    {
+      "item": "mapletree:fallen_leaves"
+    }
+  ],
+  "result": {
+      "item": "mapletree:maple_leaves"
+  }
+}
