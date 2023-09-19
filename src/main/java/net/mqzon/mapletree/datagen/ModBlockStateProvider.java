@@ -35,13 +35,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.MAPLE_PLANKS);
         blockWithItem(ModBlocks.MAPLE_LEAVES);
+        blockWithItem(ModBlocks.RED_MAPLE_LEAVES);
         saplingBlock(ModBlocks.MAPLE_SAPLING);
+        saplingBlock(ModBlocks.RED_MAPLE_SAPLING);
 
         simpleBlock(ModBlocks.POTTED_MAPLE_SAPLING.get(),
                 models().withExistingParent(
                         "mapletree:potted_maple_sapling",
                         "minecraft:block/flower_pot_cross")
                         .texture("plant", "mapletree:block/maple_sapling")
+                        .renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_RED_MAPLE_SAPLING.get(),
+                models().withExistingParent(
+                                "mapletree:potted_red_maple_sapling",
+                                "minecraft:block/flower_pot_cross")
+                        .texture("plant", "mapletree:block/red_maple_sapling")
                         .renderType("cutout"));
 
         simpleBlockItem(ModBlocks.MAPLE_LOG.get(),

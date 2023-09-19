@@ -21,14 +21,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
         this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
         this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+        this.dropSelf(ModBlocks.RED_MAPLE_SAPLING.get());
 
         this.dropPottedContents(ModBlocks.POTTED_MAPLE_SAPLING.get());
+        this.dropPottedContents(ModBlocks.POTTED_RED_MAPLE_SAPLING.get());
 
         this.add(ModBlocks.MAPLE_LEAVES.get(), (block) ->
-                createLeavesDrops(
-                        block,
-                        ModBlocks.MAPLE_SAPLING.get(),
-                        NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, ModBlocks.MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.RED_MAPLE_LEAVES.get(), (block) ->
+                createLeavesDrops(block, ModBlocks.RED_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(ModBlocks.MAPLE_STAIRS.get());
         this.dropSelf(ModBlocks.MAPLE_FENCE.get());

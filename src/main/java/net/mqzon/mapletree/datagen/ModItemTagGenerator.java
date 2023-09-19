@@ -27,7 +27,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.copy(ModBlockTagGenerator.MAPLE_LOGS, MAPLE_LOGS);
 
-        this.tag(ItemTags.COMPLETES_FIND_TREE_TUTORIAL).addTag(MAPLE_LOGS).add(ModBlocks.MAPLE_LEAVES.get().asItem());
+        this.tag(ItemTags.COMPLETES_FIND_TREE_TUTORIAL).addTag(MAPLE_LOGS)
+                .add(ModBlocks.MAPLE_LEAVES.get().asItem(), ModBlocks.RED_MAPLE_LEAVES.get().asItem());
 
         this.tag(ItemTags.LOGS).addTag(MAPLE_LOGS);
         this.tag(ItemTags.LOGS_THAT_BURN).addTag(MAPLE_LOGS);
@@ -36,9 +37,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.DOORS).add(ModBlocks.MAPLE_DOOR.get().asItem());
         this.tag(ItemTags.FENCES).add(ModBlocks.MAPLE_FENCE.get().asItem());
         this.tag(ItemTags.FENCE_GATES).add(ModBlocks.MAPLE_FENCE_GATE.get().asItem());
-        this.tag(ItemTags.LEAVES).add(ModBlocks.MAPLE_LEAVES.get().asItem());
+        this.tag(ItemTags.LEAVES).add(ModBlocks.MAPLE_LEAVES.get().asItem(), ModBlocks.RED_MAPLE_LEAVES.get().asItem());
         this.tag(ItemTags.PLANKS).add(ModBlocks.MAPLE_PLANKS.get().asItem());
-        this.tag(ItemTags.SAPLINGS).add(ModBlocks.MAPLE_SAPLING.get().asItem());
+        this.tag(ItemTags.SAPLINGS).add(ModBlocks.MAPLE_SAPLING.get().asItem(), ModBlocks.RED_MAPLE_SAPLING.get().asItem());
         this.tag(ItemTags.SLABS).add(ModBlocks.MAPLE_SLAB.get().asItem());
         this.tag(ItemTags.STAIRS).add(ModBlocks.MAPLE_STAIRS.get().asItem());
         this.tag(ItemTags.TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get().asItem());

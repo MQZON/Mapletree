@@ -60,6 +60,7 @@ public class Mapletree {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MAPLE_SAPLING.getId(), ModBlocks.POTTED_MAPLE_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_MAPLE_SAPLING.getId(), ModBlocks.POTTED_RED_MAPLE_SAPLING);
         });
     }
 

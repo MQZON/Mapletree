@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAP_BUCKET);
         simpleItem(ModItems.SYRUP_BOTTLE);
         saplingItem(ModBlocks.MAPLE_SAPLING);
+        saplingItem(ModBlocks.RED_MAPLE_SAPLING);
 
         simpleBlockItem(ModBlocks.MAPLE_DOOR);
 

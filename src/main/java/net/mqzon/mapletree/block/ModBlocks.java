@@ -18,6 +18,7 @@ import net.mqzon.mapletree.block.custom.*;
 import net.mqzon.mapletree.block.entity.ModWoodTypes;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.worldgen.tree.MapleTreeGrower;
+import net.mqzon.mapletree.worldgen.tree.RedMapleTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -26,12 +27,23 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MAPLE_SAPLING = registerBlock("maple_sapling",
             () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
+            () -> new SaplingBlock(new RedMapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.MAPLE_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_RED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_red_maple_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.RED_MAPLE_SAPLING,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> MAPLE_LEAVES = registerBlock("maple_leaves",
             () -> new MapleLeavesBlock(BlockBehaviour.Properties.copy(
                     Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_ORANGE)
+                    .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
+                    .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
+                    .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));
+    public static final RegistryObject<Block> RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            () -> new RedMapleLeavesBlock(BlockBehaviour.Properties.copy(
+                            Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_RED)
                     .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
                     .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
                     .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));

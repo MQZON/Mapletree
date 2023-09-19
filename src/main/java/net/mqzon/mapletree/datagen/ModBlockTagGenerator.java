@@ -31,9 +31,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.STRIPPED_MAPLE_WOOD.get()
         );
 
-        this.tag(BlockTags.COMPLETES_FIND_TREE_TUTORIAL).addTag(MAPLE_LOGS).add(ModBlocks.MAPLE_LEAVES.get());
+        this.tag(BlockTags.COMPLETES_FIND_TREE_TUTORIAL).addTag(MAPLE_LOGS)
+                .add(ModBlocks.MAPLE_LEAVES.get(), ModBlocks.RED_MAPLE_LEAVES.get());
         this.tag(BlockTags.OVERWORLD_NATURAL_LOGS).add(ModBlocks.MAPLE_LOG.get());
-        this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModBlocks.MAPLE_LEAVES.get());
+        this.tag(BlockTags.REPLACEABLE_BY_TREES).add(ModBlocks.MAPLE_LEAVES.get(), ModBlocks.RED_MAPLE_LEAVES.get());
 
         this.tag(BlockTags.LOGS).addTag(MAPLE_LOGS);
         this.tag(BlockTags.LOGS_THAT_BURN).addTag(MAPLE_LOGS);
@@ -42,11 +43,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.DOORS).add(ModBlocks.MAPLE_DOOR.get());
         this.tag(BlockTags.FENCES).add(ModBlocks.MAPLE_FENCE.get());
         this.tag(BlockTags.FENCE_GATES).add(ModBlocks.MAPLE_FENCE_GATE.get());
-        this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_MAPLE_SAPLING.get());
-        this.tag(BlockTags.LEAVES).add(ModBlocks.MAPLE_LEAVES.get());
+        this.tag(BlockTags.FLOWER_POTS).add(ModBlocks.POTTED_MAPLE_SAPLING.get(), ModBlocks.POTTED_RED_MAPLE_SAPLING.get());
+        this.tag(BlockTags.LEAVES).add(ModBlocks.MAPLE_LEAVES.get(), ModBlocks.RED_MAPLE_LEAVES.get());
         this.tag(BlockTags.PLANKS).add(ModBlocks.MAPLE_PLANKS.get());
         this.tag(BlockTags.PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE.get());
-        this.tag(BlockTags.SAPLINGS).add(ModBlocks.MAPLE_SAPLING.get());
+        this.tag(BlockTags.SAPLINGS).add(ModBlocks.MAPLE_SAPLING.get(), ModBlocks.RED_MAPLE_SAPLING.get());
         this.tag(BlockTags.SLABS).add(ModBlocks.MAPLE_SLAB.get());
         this.tag(BlockTags.STAIRS).add(ModBlocks.MAPLE_STAIRS.get());
         this.tag(BlockTags.TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get());
@@ -68,7 +69,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.ALL_SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get(),
                 ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
 
-        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.MAPLE_LEAVES.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.MAPLE_LEAVES.get(), ModBlocks.RED_MAPLE_LEAVES.get());
 
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(
                 ModBlocks.MAPLE_LOG.get(),
