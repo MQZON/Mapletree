@@ -18,6 +18,7 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = createKey("maple_placed");
+    public static final ResourceKey<PlacedFeature> RED_MAPLE_PLACED_KEY = createKey("red_maple_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?,?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -25,6 +26,9 @@ public class ModPlacedFeatures {
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                 ModBlocks.MAPLE_SAPLING.get()));
+        register(context, RED_MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_MAPLE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.RED_MAPLE_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
