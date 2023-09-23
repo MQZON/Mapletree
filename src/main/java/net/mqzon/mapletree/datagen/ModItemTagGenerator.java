@@ -52,5 +52,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.WOODEN_TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR.get().asItem());
 
         this.tag(ItemTags.SIGNS).add(ModItems.MAPLE_SIGN.get());
+
+        this.tag(ItemTags.BOATS).add(ModItems.MAPLE_BOAT.get());
+        this.tag(ItemTags.CHEST_BOATS).add(ModItems.MAPLE_CHEST_BOAT.get());
     }
 }

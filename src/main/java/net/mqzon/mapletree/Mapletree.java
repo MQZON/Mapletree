@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -21,6 +22,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.block.entity.ModBlockEntities;
 import net.mqzon.mapletree.block.entity.ModWoodTypes;
+import net.mqzon.mapletree.entity.ModEntityTypes;
+import net.mqzon.mapletree.entity.render.ModBoatRenderer;
 import net.mqzon.mapletree.item.ModCreativeModeTabs;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;
@@ -41,6 +44,7 @@ public class Mapletree {
         ModCreativeModeTabs.register(modEventBus);
         ModParticles.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
@@ -68,6 +72,8 @@ public class Mapletree {
             Sheets.addWoodType(ModWoodTypes.MAPLE);
             BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
             BlockEntityRenderers.register(ModBlockEntities.HANGING_SIGN_BLOCK_ENTITIES.get(), HangingSignRenderer::new);
+            EntityRenderers.register(ModEntityTypes.MAPLE_BOAT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntityTypes.MAPLE_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
         });
     }
 

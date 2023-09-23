@@ -24,6 +24,6 @@
   "block.mapletree.maple_sign": "Maple Sign",
   "block.mapletree.maple_hanging_sign": "Maple Hanging Sign",
 
-  "entity.mapletree.maple_boat": "Maple Boat",
-  "entity.mapletree.maple_chest_boat": "Maple Boat with Chest"
+  "item.mapletree.maple_boat": "Maple Boat",
+  "item.mapletree.maple_chest_boat": "Maple Boat with Chest"
 }

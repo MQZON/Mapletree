@@ -39,6 +39,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MAPLE_SIGN.get());
                         pOutput.accept(ModItems.MAPLE_HANGING_SIGN.get());
 
+                        pOutput.accept(ModItems.MAPLE_BOAT.get());
+                        pOutput.accept(ModItems.MAPLE_CHEST_BOAT.get());
+
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());
                     })).build());
