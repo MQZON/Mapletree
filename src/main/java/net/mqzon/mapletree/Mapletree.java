@@ -15,13 +15,16 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.block.entity.ModBlockEntities;
 import net.mqzon.mapletree.block.entity.ModWoodTypes;
+import net.mqzon.mapletree.config.MapletreeCommonConfigs;
 import net.mqzon.mapletree.entity.ModEntityTypes;
 import net.mqzon.mapletree.entity.render.ModBoatRenderer;
 import net.mqzon.mapletree.item.ModCreativeModeTabs;
@@ -51,8 +54,10 @@ public class Mapletree {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
         modEventBus.addListener(this::clientSetup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MapletreeCommonConfigs.SPEC,
+                "mapletree-config.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
