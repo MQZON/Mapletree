@@ -24,7 +24,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?,?>> MAPLE = registerKey("maple");
     public static final ResourceKey<ConfiguredFeature<?,?>> MAPLE_BEES_005 = registerKey("maple_bees_005");
 
-    public static final ResourceKey<ConfiguredFeature<?,?>> RED_MAPLE_KEY = registerKey("red_maple");
+    public static final ResourceKey<ConfiguredFeature<?,?>> RED_MAPLE = registerKey("red_maple");
+    public static final ResourceKey<ConfiguredFeature<?,?>> RED_MAPLE_BEES_005 = registerKey("red_maple_bees_005");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?,?>> context) {
         register(context, MAPLE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -50,7 +51,7 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2))
                 .decorators(List.of(new BeehiveDecorator(0.05F))).build());
 
-        register(context, RED_MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, RED_MAPLE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()),
                 new StraightTrunkPlacer(7,2,0),
                 BlockStateProvider.simple(ModBlocks.RED_MAPLE_LEAVES.get()),
@@ -60,6 +61,18 @@ public class ModConfiguredFeatures {
                         ConstantInt.of(7), //height
                         0.75F, 0.75F),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, RED_MAPLE_BEES_005, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.MAPLE_LOG.get()),
+                new StraightTrunkPlacer(7,2,0),
+                BlockStateProvider.simple(ModBlocks.RED_MAPLE_LEAVES.get()),
+                new MapleFoliagePlacer(
+                        ConstantInt.of(4), //radius
+                        ConstantInt.of(2), //offset
+                        ConstantInt.of(7), //height
+                        0.75F, 0.75F),
+                new TwoLayersFeatureSize(1, 0, 2))
+                .decorators(List.of(new BeehiveDecorator(0.05F))).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

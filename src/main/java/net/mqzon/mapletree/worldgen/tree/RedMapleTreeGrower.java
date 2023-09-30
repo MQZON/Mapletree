@@ -10,8 +10,7 @@ import org.jetbrains.annotations.Nullable;
 public class RedMapleTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(
-            RandomSource pRandom, boolean pHasFlowers) {
-        return ModConfiguredFeatures.RED_MAPLE_KEY;
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
+        return pHasFlowers ? ModConfiguredFeatures.RED_MAPLE_BEES_005 : ModConfiguredFeatures.RED_MAPLE;
     }
 }
