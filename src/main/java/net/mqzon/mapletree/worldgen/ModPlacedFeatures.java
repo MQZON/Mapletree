@@ -20,6 +20,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = createKey("maple_placed");
     public static final ResourceKey<PlacedFeature> MAPLE_BEES_005_PLACED_KEY = createKey("maple_bees_005_placed");
     public static final ResourceKey<PlacedFeature> RED_MAPLE_PLACED_KEY = createKey("red_maple_placed");
+    public static final ResourceKey<PlacedFeature> RED_MAPLE_BEES_005_PLACED_KEY = createKey("red_maple_bees_005_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?,?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -33,6 +34,10 @@ public class ModPlacedFeatures {
                         ModBlocks.MAPLE_SAPLING.get()));
 
         register(context, RED_MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_MAPLE),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.RED_MAPLE_SAPLING.get()));
+
+        register(context, RED_MAPLE_BEES_005_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_MAPLE_BEES_005),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.RED_MAPLE_SAPLING.get()));
     }
