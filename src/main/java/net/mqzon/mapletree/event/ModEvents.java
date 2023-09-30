@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.config.MapletreeCommonConfigs;
 
 import java.util.List;
 
@@ -18,8 +19,11 @@ public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(WandererTradesEvent event) {
         List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
-        ItemStack mapleSapling = new ItemStack(ModBlocks.MAPLE_SAPLING.get(), 1);
-        trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
-                mapleSapling, 8, 1, 1));
+
+        if(MapletreeCommonConfigs.MAPLE_TRADE.get()) {
+            ItemStack mapleSapling = new ItemStack(ModBlocks.MAPLE_SAPLING.get(), 1);
+            trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
+                    mapleSapling, 8, 1, 1));
+        }
     }
 }

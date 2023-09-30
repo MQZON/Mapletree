@@ -25,5 +25,8 @@
   "block.mapletree.maple_pressure_plate": "Maple Pressure Plate",
   "block.mapletree.maple_button": "Maple Button",
   "block.mapletree.maple_sign": "Maple Sign",
-  "block.mapletree.maple_hanging_sign": "Maple Hanging Sign"
+  "block.mapletree.maple_hanging_sign": "Maple Hanging Sign",
+
+  "item.mapletree.maple_boat": "Maple Boat",
+  "item.mapletree.maple_chest_boat": "Maple Boat with Chest"
 }
