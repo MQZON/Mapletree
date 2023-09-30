@@ -25,5 +25,11 @@ public class ModEvents {
             trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
                     mapleSapling, 8, 1, 1));
         }
+
+        if(MapletreeCommonConfigs.RED_MAPLE_TRADE.get()) {
+            ItemStack mapleSapling = new ItemStack(ModBlocks.RED_MAPLE_SAPLING.get(), 1);
+            trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
+                    mapleSapling, 8, 1, 1));
+        }
     }
 }
