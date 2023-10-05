@@ -16,6 +16,8 @@ public class ModParticles {
 
     public static final RegistryObject<SimpleParticleType> MAPLE_LEAVES = registerParticle(
             "maple_leaves", () -> new SimpleParticleType(false));
+    public static final RegistryObject<SimpleParticleType> RED_MAPLE_LEAVES = registerParticle(
+            "red_maple_leaves", () -> new SimpleParticleType(false));
 
     private static <T extends ParticleType<?>> RegistryObject<T> registerParticle(String name, Supplier<T> particle) {
         return PARTICLE_TYPES.register(name, particle);

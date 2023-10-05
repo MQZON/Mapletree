@@ -20,7 +20,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.mapletree_tab"))
                     .displayItems(((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.MAPLE_SAPLING.get());
+                        pOutput.accept(ModBlocks.RED_MAPLE_SAPLING.get());
                         pOutput.accept(ModBlocks.MAPLE_LEAVES.get());
+                        pOutput.accept(ModBlocks.RED_MAPLE_LEAVES.get());
                         pOutput.accept(ModBlocks.MAPLE_LOG.get());
                         pOutput.accept(ModBlocks.MAPLE_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_MAPLE_LOG.get());
@@ -38,6 +40,9 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.MAPLE_SIGN.get());
                         pOutput.accept(ModItems.MAPLE_HANGING_SIGN.get());
+
+                        pOutput.accept(ModItems.MAPLE_BOAT.get());
+                        pOutput.accept(ModItems.MAPLE_CHEST_BOAT.get());
 
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());

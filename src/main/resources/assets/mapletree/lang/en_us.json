@@ -5,8 +5,11 @@
   "item.mapletree.sap_bucket": "Sap Bucket",
 
   "block.mapletree.maple_sapling": "Maple Sapling",
+  "block.mapletree.red_maple_sapling": "Red Maple Sapling",
   "block.mapletree.potted_maple_sapling": "Potted Maple Sapling",
+  "block.mapletree.potted_red_maple_sapling": "Potted Red Maple Sapling",
   "block.mapletree.maple_leaves": "Maple Leaves",
+  "block.mapletree.red_maple_leaves": "Red Maple Leaves",
   "block.mapletree.maple_log": "Maple Log",
   "block.mapletree.maple_wood": "Maple Wood",
   "block.mapletree.stripped_maple_log": "Stripped Maple Log",
@@ -23,6 +26,9 @@
   "block.mapletree.maple_button": "Maple Button",
   "block.mapletree.maple_sign": "Maple Sign",
   "block.mapletree.maple_hanging_sign": "Maple Hanging Sign",
+
+  "item.mapletree.maple_boat": "Maple Boat",
+  "item.mapletree.maple_chest_boat": "Maple Boat with Chest"
 
   "block.mapletree.fallen_leaves": "Maple Leaf Pile"
 }

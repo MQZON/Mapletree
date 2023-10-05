@@ -13,6 +13,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.MAPLE_LEAVES.get(), MapleLeafParticle.Provider::new);
+            event.registerSpriteSet(ModParticles.RED_MAPLE_LEAVES.get(), MapleLeafParticle.Provider::new);
     }
 
 }

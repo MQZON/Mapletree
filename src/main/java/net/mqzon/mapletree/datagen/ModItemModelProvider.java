@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAP_BUCKET);
         simpleItem(ModItems.SYRUP_BOTTLE);
         saplingItem(ModBlocks.MAPLE_SAPLING);
+        saplingItem(ModBlocks.RED_MAPLE_SAPLING);
 
         simpleBlockItem(ModBlocks.MAPLE_DOOR);
 
@@ -37,6 +38,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.MAPLE_SIGN);
         simpleItem(ModItems.MAPLE_HANGING_SIGN);
+
+        simpleItem(ModItems.MAPLE_BOAT);
+        simpleItem(ModItems.MAPLE_CHEST_BOAT);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
