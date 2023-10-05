@@ -45,7 +45,7 @@ public class ModBlocks {
                     .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));
     public static final RegistryObject<Block> RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
             () -> new RedMapleLeavesBlock(BlockBehaviour.Properties.copy(
-                            Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_RED)
+                    Blocks.MANGROVE_LEAVES).mapColor(MapColor.COLOR_RED)
                     .isViewBlocking((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
                     .isSuffocating((BlockState s, BlockGetter g, BlockPos p) -> { return false;})
                     .isRedstoneConductor((BlockState s, BlockGetter g, BlockPos p) -> { return false;})));
