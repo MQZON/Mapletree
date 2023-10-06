@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.block.ModBlocks;
 
+import java.util.Arrays;
 import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
@@ -51,7 +52,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
+        String[] nonGenerated = {"mapletree:maple_leaf_pile", "mapletree:red_maple_leaf_pile"};
         return ModBlocks.BLOCKS.getEntries().stream()
-                .filter(b -> !b.getId().toString().equals("mapletree:maple_leaf_pile")).map(RegistryObject::get)::iterator;
+                .filter(b -> !(Arrays.asList(nonGenerated).contains(b.getId().toString())))
+                .map(RegistryObject::get)::iterator;
     }
 }

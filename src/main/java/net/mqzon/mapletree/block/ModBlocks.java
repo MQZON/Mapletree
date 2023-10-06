@@ -112,6 +112,15 @@ public class ModBlocks {
                             () -> SoundEvents.GRASS_PLACE,
                             () -> SoundEvents.GRASS_HIT,
                             () -> SoundEvents.GRASS_BREAK))));
+    public static final RegistryObject<Block> RED_MAPLE_LEAF_PILE = registerBlock("red_maple_leaf_pile",
+            () -> new LeafPileBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .mapColor(MapColor.COLOR_RED)
+                    .sound(new ForgeSoundType(1.0F, 1.0F,
+                            () -> SoundEvents.GRASS_BREAK,
+                            () -> SoundEvents.GRASS_BREAK,
+                            () -> SoundEvents.GRASS_PLACE,
+                            () -> SoundEvents.GRASS_HIT,
+                            () -> SoundEvents.GRASS_BREAK))));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
