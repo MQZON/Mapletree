@@ -103,7 +103,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAPLE_WALL_HANGING_SIGN = registerBlockWithoutBlockItem("maple_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAPLE));
 
-    public static final RegistryObject<Block> FALLEN_LEAVES = registerBlock("fallen_leaves",
+    public static final RegistryObject<Block> MAPLE_LEAF_PILE = registerBlock("maple_leaf_pile",
             () -> new LeafPileBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .mapColor(MapColor.COLOR_ORANGE)
                     .sound(new ForgeSoundType(1.0F, 1.0F,

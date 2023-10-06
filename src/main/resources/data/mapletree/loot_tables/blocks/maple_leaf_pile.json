@@ -21,7 +21,7 @@
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "1"
@@ -35,13 +35,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "2"
@@ -55,13 +55,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "3"
@@ -75,13 +75,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "4"
@@ -95,13 +95,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "5"
@@ -115,13 +115,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "6"
@@ -135,13 +135,13 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
                   "conditions": [
                     {
-                      "block": "mapletree:fallen_leaves",
+                      "block": "mapletree:maple_leaf_pile",
                       "condition": "minecraft:block_state_property",
                       "properties": {
                         "layers": "7"
@@ -155,11 +155,11 @@
                       "function": "minecraft:set_count"
                     }
                   ],
-                  "name": "mapletree:fallen_leaves"
+                  "name": "mapletree:maple_leaf_pile"
                 },
                 {
                   "type": "minecraft:item",
-                  "name": "mapletree:fallen_leaves",
+                  "name": "mapletree:maple_leaf_pile",
                   "functions": [
                     {
                       "add": false,
@@ -176,5 +176,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "mapletree:blocks/fallen_leaves"
+  "random_sequence": "mapletree:blocks/maple_leaf_pile"
 }

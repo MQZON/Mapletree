@@ -69,12 +69,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.ALL_SIGNS).add(ModBlocks.MAPLE_SIGN.get(), ModBlocks.MAPLE_WALL_SIGN.get(),
                 ModBlocks.MAPLE_HANGING_SIGN.get(), ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
 
-        this.tag(BlockTags.WOOL_CARPETS).add(ModBlocks.FALLEN_LEAVES.get());
+        this.tag(BlockTags.WOOL_CARPETS).add(ModBlocks.MAPLE_LEAF_PILE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(
                 ModBlocks.MAPLE_LEAVES.get(),
                 ModBlocks.RED_MAPLE_LEAVES.get(),
-                ModBlocks.FALLEN_LEAVES.get()
+                ModBlocks.MAPLE_LEAF_PILE.get()
         );
 
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(

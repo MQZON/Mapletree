@@ -52,6 +52,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream()
-                .filter(b -> !b.getId().toString().equals("mapletree:fallen_leaves")).map(RegistryObject::get)::iterator;
+                .filter(b -> !b.getId().toString().equals("mapletree:maple_leaf_pile")).map(RegistryObject::get)::iterator;
     }
 }

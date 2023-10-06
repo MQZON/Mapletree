@@ -47,7 +47,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());
 
-                        pOutput.accept(ModBlocks.FALLEN_LEAVES.get());
+                        pOutput.accept(ModBlocks.MAPLE_LEAF_PILE.get());
                     })).build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
