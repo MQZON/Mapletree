@@ -1,4 +1,4 @@
-This mod adds maple trees to minecraft. Maple trees can be obtained by purchasing a sapling from a wandering trader. 
+This mod adds maple trees to minecraft. Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the creative mode Mapletree tab. 
 
 ![Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Sapling_Trade.png?raw=true)
 ![Red Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Sapling_Trade.png?raw=true)
