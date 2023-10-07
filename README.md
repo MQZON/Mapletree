@@ -7,7 +7,7 @@ This mod adds maple trees to minecraft. Maple trees can be obtained by purchasin
 Maple can be used as a regular wood type for all wood items. Maple Leaves can also be crafted into Maple Leaf Piles. Maple Leaf Piles (and their Red variant) act like snow layers, allowing you to place up to eight layers within a block space. Leaf Piles make a nice crunchy sound when you walk on them, and reduce fall damage like Hay Bales when you fall on them.
 
 <details>
-<summary>Leaf Pile Recipes</summary>
+<summary>Leaf Pile Recipes (all are shapeless)</summary>
    
    ![Maple Leaf Pile Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Leaf_Pile_Recipe.png?raw=true)  
    ![Maple Leaf Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Leaf_Recipe.png?raw=true)  
