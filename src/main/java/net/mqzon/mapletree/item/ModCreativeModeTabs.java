@@ -23,6 +23,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RED_MAPLE_SAPLING.get());
                         pOutput.accept(ModBlocks.MAPLE_LEAVES.get());
                         pOutput.accept(ModBlocks.RED_MAPLE_LEAVES.get());
+
+                        pOutput.accept(ModBlocks.MAPLE_LEAF_PILE.get());
+                        pOutput.accept(ModBlocks.RED_MAPLE_LEAF_PILE.get());
+
                         pOutput.accept(ModBlocks.MAPLE_LOG.get());
                         pOutput.accept(ModBlocks.MAPLE_WOOD.get());
                         pOutput.accept(ModBlocks.STRIPPED_MAPLE_LOG.get());
@@ -47,8 +51,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SAP_BUCKET.get());
                         pOutput.accept(ModItems.SYRUP_BOTTLE.get());
 
-                        pOutput.accept(ModBlocks.MAPLE_LEAF_PILE.get());
-                        pOutput.accept(ModBlocks.RED_MAPLE_LEAF_PILE.get());
+                        pOutput.accept(ModItems.GLAZED_CARROTS.get());
+                        pOutput.accept(ModItems.GLAZED_SALMON.get());
+                        pOutput.accept(ModItems.PANCAKES.get());
                     })).build());
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

@@ -41,6 +41,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.MAPLE_BOAT);
         simpleItem(ModItems.MAPLE_CHEST_BOAT);
+
+        simpleItem(ModItems.GLAZED_CARROTS);
+        simpleItem(ModItems.GLAZED_SALMON);
+        simpleItem(ModItems.PANCAKES);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

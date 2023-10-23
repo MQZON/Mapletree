@@ -2,6 +2,7 @@ package net.mqzon.mapletree.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.mqzon.mapletree.block.ModBlocks;
@@ -51,5 +52,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         hangingSign(consumer, ModItems.MAPLE_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAPLE_LOG.get());
         woodenBoat(consumer,ModItems.MAPLE_BOAT.get(),ModBlocks.MAPLE_PLANKS.get());
         chestBoat(consumer,ModItems.MAPLE_CHEST_BOAT.get(),ModItems.MAPLE_BOAT.get());
+
+        smeltingResultFromBase(consumer, ModItems.SYRUP_BOTTLE.get(), ModItems.SAP_BUCKET.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.GLAZED_CARROTS.get())
+                .requires(Items.CARROT, 3).requires(ModItems.SYRUP_BOTTLE.get(), 1)
+                .unlockedBy("has_syrup", has(ModItems.SYRUP_BOTTLE.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.GLAZED_SALMON.get())
+                .requires(Items.COOKED_SALMON, 1).requires(ModItems.SYRUP_BOTTLE.get(), 1)
+                .unlockedBy("has_syrup", has(ModItems.SYRUP_BOTTLE.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.PANCAKES.get())
+                .requires(Items.WHEAT, 1).requires(Items.EGG, 1).requires(Items.MILK_BUCKET, 1)
+                .requires(ModItems.SYRUP_BOTTLE.get(), 1)
+                .unlockedBy("has_syrup", has(ModItems.SYRUP_BOTTLE.get())).save(consumer);
     }
 }

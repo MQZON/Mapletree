@@ -31,5 +31,9 @@
   "item.mapletree.maple_chest_boat": "Maple Boat with Chest",
 
   "block.mapletree.maple_leaf_pile": "Maple Leaf Pile",
-  "block.mapletree.red_maple_leaf_pile": "Red Maple Leaf Pile"
+  "block.mapletree.red_maple_leaf_pile": "Red Maple Leaf Pile",
+
+  "item.mapletree.glazed_carrots": "Glazed Carrots",
+  "item.mapletree.glazed_salmon": "Glazed Salmon",
+  "item.mapletree.pancakes": "Pancakes"
 }
