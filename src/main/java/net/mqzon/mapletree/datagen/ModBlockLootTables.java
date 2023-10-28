@@ -3,6 +3,7 @@ package net.mqzon.mapletree.datagen;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.RegistryObject;
 import net.mqzon.mapletree.block.ModBlocks;
 
@@ -48,6 +49,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MAPLE_WALL_SIGN.get());
         this.dropSelf(ModBlocks.MAPLE_HANGING_SIGN.get());
         this.dropSelf(ModBlocks.MAPLE_WALL_HANGING_SIGN.get());
+
+        this.add(ModBlocks.SAP_CAULDRON.get(),
+                block -> createSingleItemTable(Blocks.CAULDRON));
     }
 
     @Override

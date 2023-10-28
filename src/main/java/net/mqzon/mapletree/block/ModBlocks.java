@@ -2,6 +2,7 @@ package net.mqzon.mapletree.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,6 +20,7 @@ import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.custom.*;
 import net.mqzon.mapletree.block.entity.ModWoodTypes;
 import net.mqzon.mapletree.item.ModItems;
+import net.mqzon.mapletree.utility.SapCauldronInteraction;
 import net.mqzon.mapletree.worldgen.tree.MapleTreeGrower;
 import net.mqzon.mapletree.worldgen.tree.RedMapleTreeGrower;
 
@@ -121,6 +123,9 @@ public class ModBlocks {
                             () -> SoundEvents.GRASS_PLACE,
                             () -> SoundEvents.GRASS_HIT,
                             () -> SoundEvents.GRASS_BREAK))));
+
+    public static final RegistryObject<Block> SAP_CAULDRON = registerBlock("sap_cauldron",
+            () -> new SapCauldron(BlockBehaviour.Properties.copy(Blocks.CAULDRON), (predicate) -> false, SapCauldronInteraction.SAP));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
