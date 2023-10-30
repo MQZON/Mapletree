@@ -31,6 +31,7 @@ import net.mqzon.mapletree.item.ModCreativeModeTabs;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;
 import net.mqzon.mapletree.utility.SapCauldronInteraction;
+import net.mqzon.mapletree.utility.SyrupCauldronInteraction;
 import net.mqzon.mapletree.worldgen.foliage.ModFoliagePlacers;
 import org.slf4j.Logger;
 
@@ -72,6 +73,7 @@ public class Mapletree {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.MAPLE_SAPLING.getId(), ModBlocks.POTTED_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RED_MAPLE_SAPLING.getId(), ModBlocks.POTTED_RED_MAPLE_SAPLING);
             SapCauldronInteraction.bootstrap();
+            SyrupCauldronInteraction.bootstrap();
         });
     }
 

@@ -52,6 +52,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.SAP_CAULDRON.get(),
                 block -> createSingleItemTable(Blocks.CAULDRON));
+        this.add(ModBlocks.SYRUP_CAULDRON.get(),
+                block -> createSingleItemTable(Blocks.CAULDRON));
     }
 
     @Override
