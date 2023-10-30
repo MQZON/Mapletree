@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.LayeredCauldronBlock;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class SapCauldron extends LayeredCauldronBlock {
+public class SapCauldron extends FillableLayeredCauldronBlock {
     public SapCauldron(Properties pProperties, Predicate<Biome.Precipitation> pFillPredicate, Map<Item, CauldronInteraction> pInteractions) {
         super(pProperties, pFillPredicate, pInteractions);
     }
