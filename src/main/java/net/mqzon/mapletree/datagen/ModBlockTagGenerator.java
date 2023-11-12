@@ -97,5 +97,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MAPLE_HANGING_SIGN.get(),
                 ModBlocks.MAPLE_WALL_HANGING_SIGN.get()
         );
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ModBlocks.SAP_CAULDRON.get(),
+                ModBlocks.SYRUP_CAULDRON.get()
+        );
+
+        this.tag(BlockTags.CAULDRONS).add(
+                ModBlocks.SAP_CAULDRON.get(),
+                ModBlocks.SYRUP_CAULDRON.get()
+        );
     }
 }
