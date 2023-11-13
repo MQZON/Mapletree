@@ -1,4 +1,8 @@
-This mod adds maple trees to minecraft. Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the creative mode Mapletree tab. 
+This mod adds maple trees to minecraft.
+**Preview**
+![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
+
+Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the Mapletree creative mode tab. 
 
 ![Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Sapling_Trade.png?raw=true)
 ![Red Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Sapling_Trade.png?raw=true)
@@ -15,9 +19,23 @@ Maple can be used as a regular wood type for all wood items. Maple Leaves can al
    ![Red Maple Leaf Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Leaf_Recipe.png?raw=true)  
 </details>
 
-**Preview**
-![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
+Maple trees can also be used to obtain Syrup and syrupy foods!
+You can right-click on a Maple Log with a bucket to obtain a Sap Bucket.
+Sap can then be evaporated into Syrup by placing three buckets into a cauldron that is directly over a heat source.
+Heat sources include Lava, Magma, Fires & Campfires (regular or soul variants).
+After a little while the Sap will evaporate into Syrup, which can be collected with a Glass Bottle.
 
+Once you have collected some Syrup, you can either consume it directly (like Honey) or use it to craft some delicious new syrupy foods. 
+All syrupy foods, Syrup Bottles included, will grant the Saturation effect for a short time.
+The Saturation effect restores additional hunger and saturation points, making these foods quite powerful!
+
+<details>
+<summary>Food Recipes (all are shapeless)</summary>
+
+   ![Glazed Carrots Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Glazed_Carrots_Recipe.png?raw=true)  
+   ![Glazed Salmon Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Glazed_Salmon_Recipe.png?raw=true)
+   ![Pancakes Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Pancakes_Recipe.png?raw=true)
+</details>
 
 Source installation information for modders
 -------------------------------------------
