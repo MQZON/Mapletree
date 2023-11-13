@@ -1,14 +1,16 @@
-This mod adds maple trees to minecraft.
+This mod adds maple trees to minecraft.  
 **Preview**
 ![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
 
-Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the Mapletree creative mode tab. 
+Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the Mapletree creative mode tab.
+Maple can be used as a regular wood type for all wood items.
 
 ![Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Sapling_Trade.png?raw=true)
 ![Red Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Sapling_Trade.png?raw=true)
 
-
-Maple can be used as a regular wood type for all wood items. Maple Leaves can also be crafted into Maple Leaf Piles. Leaf Piles act like snow layers, allowing you to place up to eight layers within a block space. Leaf Piles make a nice crunchy sound when you walk on them, and reduce fall damage like Hay Bales when you fall on three or more layers.
+Maple Leaves can also be crafted into Maple Leaf Piles. 
+Leaf Piles act like snow layers, allowing you to place up to eight layers within a block space. 
+Leaf Piles make a nice crunchy sound when you walk on them, and reduce fall damage like Hay Bales when you fall on three or more layers.
 
 <details>
 <summary>Leaf Pile Recipes (all are shapeless)</summary>
@@ -20,7 +22,7 @@ Maple can be used as a regular wood type for all wood items. Maple Leaves can al
 </details>
 
 Maple trees can also be used to obtain Syrup and syrupy foods!
-You can right-click on a Maple Log with a bucket to obtain a Sap Bucket.
+You can right-click on a Maple Log with a bucket* to obtain a Sap Bucket.
 Sap can then be evaporated into Syrup by placing three buckets into a cauldron that is directly over a heat source.
 Heat sources include Lava, Magma, Fires & Campfires (regular or soul variants).
 After a little while the Sap will evaporate into Syrup, which can be collected with a Glass Bottle.
@@ -28,6 +30,8 @@ After a little while the Sap will evaporate into Syrup, which can be collected w
 Once you have collected some Syrup, you can either consume it directly (like Honey) or use it to craft some delicious new syrupy foods. 
 All syrupy foods, Syrup Bottles included, will grant the Saturation effect for a short time.
 The Saturation effect restores additional hunger and saturation points, making these foods quite powerful!
+
+*This process may change in the future to be a bit less silly. 
 
 <details>
 <summary>Food Recipes (all are shapeless)</summary>
