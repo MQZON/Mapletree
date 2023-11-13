@@ -1,5 +1,19 @@
-This mod adds maple trees to minecraft. Maple trees can be obtained by purchasing a sapling from a wandering trader. Maple can be used as a regular wood type for all wood items.
+This mod adds maple trees to minecraft. Maple trees can be obtained by purchasing a sapling from a wandering trader, or through the creative mode Mapletree tab. 
 
+![Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Sapling_Trade.png?raw=true)
+![Red Maple Sapling Trade](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Sapling_Trade.png?raw=true)
+
+
+Maple can be used as a regular wood type for all wood items. Maple Leaves can also be crafted into Maple Leaf Piles. Leaf Piles act like snow layers, allowing you to place up to eight layers within a block space. Leaf Piles make a nice crunchy sound when you walk on them, and reduce fall damage like Hay Bales when you fall on three or more layers.
+
+<details>
+<summary>Leaf Pile Recipes (all are shapeless)</summary>
+   
+   ![Maple Leaf Pile Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Leaf_Pile_Recipe.png?raw=true)  
+   ![Maple Leaf Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Maple_Leaf_Recipe.png?raw=true)  
+   ![Red Maple Leaf Pile Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Leaf_Pile_Recipe.png?raw=true)  
+   ![Red Maple Leaf Recipe](https://github.com/MQZON/Mapletree/blob/master/images/Red_Maple_Leaf_Recipe.png?raw=true)  
+</details>
 
 **Preview**
 ![Mapletree](https://github.com/MQZON/Mapletree/blob/master/images/Mapletree_preview.png?raw=true)
