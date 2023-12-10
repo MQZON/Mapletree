@@ -18,18 +18,18 @@ import java.util.List;
 public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(WandererTradesEvent event) {
-        List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
+        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
         if(MapletreeCommonConfigs.MAPLE_TRADE.get()) {
             ItemStack mapleSapling = new ItemStack(ModBlocks.MAPLE_SAPLING.get(), 1);
-            trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
+            rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
                     mapleSapling, 8, 1, 1));
         }
 
         if(MapletreeCommonConfigs.RED_MAPLE_TRADE.get()) {
-            ItemStack mapleSapling = new ItemStack(ModBlocks.RED_MAPLE_SAPLING.get(), 1);
-            trades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
-                    mapleSapling, 8, 1, 1));
+            ItemStack redMapleSapling = new ItemStack(ModBlocks.RED_MAPLE_SAPLING.get(), 1);
+            rareTrades.add(new BasicItemListing(new ItemStack(Items.EMERALD, 5),
+                    redMapleSapling, 8, 1, 1));
         }
     }
 }
