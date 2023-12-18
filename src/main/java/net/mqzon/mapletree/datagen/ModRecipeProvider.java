@@ -55,7 +55,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         smeltingResultFromBase(consumer, ModItems.SYRUP_BOTTLE.get(), ModItems.SAP_BUCKET.get());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.GLAZED_CARROTS.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.GLAZED_CARROTS.get(), 3)
                 .requires(Items.CARROT, 3).requires(ModItems.SYRUP_BOTTLE.get(), 1)
                 .unlockedBy("has_syrup", has(ModItems.SYRUP_BOTTLE.get())).save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.GLAZED_SALMON.get())
