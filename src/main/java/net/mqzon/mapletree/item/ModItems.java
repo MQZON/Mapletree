@@ -1,9 +1,6 @@
 package net.mqzon.mapletree.item;
 
-import net.minecraft.world.item.HangingSignItem;
-import net.minecraft.world.item.HoneyBottleItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,7 +29,8 @@ public class ModItems {
     public static final RegistryObject<Item> SAP_BUCKET = ITEMS.register("sap_bucket",
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SYRUP_BOTTLE = ITEMS.register("syrup_bottle",
-            () -> new HoneyBottleItem(new Item.Properties().food(ModFoods.SYRUP_BOTTLE).stacksTo(16)));
+            () -> new HoneyBottleItem(new Item.Properties().food(ModFoods.SYRUP_BOTTLE).stacksTo(16)
+                    .craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> GLAZED_CARROTS = ITEMS.register("glazed_carrots",
             () -> new Item(new Item.Properties().food(ModFoods.GLAZED_CARROTS)));
     public static final RegistryObject<Item> GLAZED_SALMON = ITEMS.register("glazed_salmon",
