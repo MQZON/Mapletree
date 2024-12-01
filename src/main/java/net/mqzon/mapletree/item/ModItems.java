@@ -17,7 +17,7 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        Mapletree.LOGGER.info("Registering Mod Items for" + Mapletree.MOD_ID);
+        Mapletree.LOGGER.info("Registering Mod Items for " + Mapletree.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(SAP_BUCKET);
