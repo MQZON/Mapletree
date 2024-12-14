@@ -1,6 +1,7 @@
 package net.mqzon.mapletree.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -16,7 +17,7 @@ import net.mqzon.mapletree.Mapletree;
 public class ModBlocks {
 
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).requiresTool().));
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).requiresTool()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -34,5 +35,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.MAPLE_PLANKS);
         });
+        
+        FlammableBlockRegistry.getDefaultInstance().add(MAPLE_PLANKS,5, 20);
     }
 }
