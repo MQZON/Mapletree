@@ -2,9 +2,11 @@ package net.mqzon.mapletree.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -15,8 +17,18 @@ import net.mqzon.mapletree.Mapletree;
 
 public class ModBlocks {
 
+    public static final Block MAPLE_LOG = registerBlock("maple_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).requiresTool()));
+    public static final Block MAPLE_WOOD = registerBlock("maple_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).requiresTool()));
+    public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).requiresTool()));
+    public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).requiresTool()));
+
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).requiresTool()));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -33,8 +45,19 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.MAPLE_PLANKS);
+            entries.add(ModBlocks.MAPLE_LOG);
+            entries.add(ModBlocks.MAPLE_WOOD);
+            entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
+            entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
         });
 
-        FlammableBlockRegistry.getDefaultInstance().add(MAPLE_PLANKS,5, 20);
+        StrippableBlockRegistry.register(MAPLE_LOG, STRIPPED_MAPLE_LOG);
+        StrippableBlockRegistry.register(MAPLE_WOOD, STRIPPED_MAPLE_WOOD);
+        FlammableBlockRegistry FlammableBlocks = FlammableBlockRegistry.getDefaultInstance();
+        FlammableBlocks.add(MAPLE_PLANKS,5, 20);
+        FlammableBlocks.add(MAPLE_LOG, 5, 5);
+        FlammableBlocks.add(MAPLE_WOOD, 5, 5);
+        FlammableBlocks.add(STRIPPED_MAPLE_LOG, 5, 5);
+        FlammableBlocks.add(STRIPPED_MAPLE_WOOD, 5, 5);
     }
 }
