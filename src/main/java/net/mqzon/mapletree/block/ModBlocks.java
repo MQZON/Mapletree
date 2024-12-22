@@ -3,10 +3,7 @@ package net.mqzon.mapletree.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -16,6 +13,9 @@ import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
 
 public class ModBlocks {
+
+    public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).requiresTool()));
@@ -49,15 +49,18 @@ public class ModBlocks {
             entries.add(ModBlocks.MAPLE_WOOD);
             entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
             entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
+            entries.add(ModBlocks.MAPLE_LEAVES); // Todo: Create custom item group
         });
 
         StrippableBlockRegistry.register(MAPLE_LOG, STRIPPED_MAPLE_LOG);
         StrippableBlockRegistry.register(MAPLE_WOOD, STRIPPED_MAPLE_WOOD);
+
         FlammableBlockRegistry FlammableBlocks = FlammableBlockRegistry.getDefaultInstance();
         FlammableBlocks.add(MAPLE_PLANKS,5, 20);
         FlammableBlocks.add(MAPLE_LOG, 5, 5);
         FlammableBlocks.add(MAPLE_WOOD, 5, 5);
         FlammableBlocks.add(STRIPPED_MAPLE_LOG, 5, 5);
         FlammableBlocks.add(STRIPPED_MAPLE_WOOD, 5, 5);
+        FlammableBlocks.add(MAPLE_LEAVES, 30, 60);
     }
 }
