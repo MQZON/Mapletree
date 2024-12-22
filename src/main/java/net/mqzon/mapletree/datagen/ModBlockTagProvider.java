@@ -48,6 +48,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAPLE_WOOD)
                 .add(ModBlocks.STRIPPED_MAPLE_LOG)
                 .add(ModBlocks.STRIPPED_MAPLE_WOOD)
-                .add(ModBlocks.MAPLE_PLANKS);
+                .add(ModBlocks.MAPLE_PLANKS)
+                .add(ModBlocks.MAPLE_SLAB)
+                .add(ModBlocks.MAPLE_STAIRS);
     }
 }
