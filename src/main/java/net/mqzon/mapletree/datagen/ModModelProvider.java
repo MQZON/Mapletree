@@ -14,6 +14,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         blockStateModelGenerator.registerSingleton(ModBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
 
         blockStateModelGenerator.registerLog(ModBlocks.MAPLE_LOG)

@@ -4,15 +4,31 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.block.ModBlocks;
 
 public class ModConfiguredFeatures {
 
-    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE = registryKey("maple");
 
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        register(context, MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(7, 2, 0),
+                BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
+                // Todo: Implement custom foliage placer
+                new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

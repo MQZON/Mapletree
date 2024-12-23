@@ -14,6 +14,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.MAPLE_SAPLING);
+
+        addDrop(ModBlocks.MAPLE_LEAVES, leavesDrops(ModBlocks.MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, 0.0625f));
+
         addDrop(ModBlocks.MAPLE_LOG);
         addDrop(ModBlocks.MAPLE_WOOD);
         addDrop(ModBlocks.STRIPPED_MAPLE_LOG);

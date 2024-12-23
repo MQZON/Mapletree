@@ -11,8 +11,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
+
+    public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
+            new SaplingBlock(ModSaplingGenerators.MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
@@ -51,7 +55,8 @@ public class ModBlocks {
         Mapletree.LOGGER.info("Registering Mod Blocks for " +Mapletree.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.MAPLE_LEAVES); // Todo: Create custom item group
+            entries.add(ModBlocks.MAPLE_SAPLING); // Todo: Create custom item group
+            entries.add(ModBlocks.MAPLE_LEAVES);
             entries.add(ModBlocks.MAPLE_LOG);
             entries.add(ModBlocks.MAPLE_WOOD);
             entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
