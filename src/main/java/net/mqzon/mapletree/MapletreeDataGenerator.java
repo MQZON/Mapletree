@@ -2,9 +2,11 @@ package net.mqzon.mapletree;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.mqzon.mapletree.datagen.ModBlockTagProvider;
-import net.mqzon.mapletree.datagen.ModLootTableProvider;
-import net.mqzon.mapletree.datagen.ModModelProvider;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
+import net.mqzon.mapletree.datagen.*;
+import net.mqzon.mapletree.world.ModConfiguredFeatures;
+import net.mqzon.mapletree.world.ModPlacedFeatures;
 
 public class MapletreeDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -12,7 +14,16 @@ public class MapletreeDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModBlockTagProvider::new);
+//		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
+//		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
 }
