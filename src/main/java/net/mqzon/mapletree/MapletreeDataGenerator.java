@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.mqzon.mapletree.datagen.ModBlockTagProvider;
 import net.mqzon.mapletree.datagen.ModLootTableProvider;
+import net.mqzon.mapletree.datagen.ModModelProvider;
 
 public class MapletreeDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -12,5 +13,6 @@ public class MapletreeDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModModelProvider::new);
 	}
 }
