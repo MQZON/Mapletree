@@ -51,12 +51,12 @@ public class ModBlocks {
         Mapletree.LOGGER.info("Registering Mod Blocks for " +Mapletree.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.MAPLE_PLANKS);
+            entries.add(ModBlocks.MAPLE_LEAVES); // Todo: Create custom item group
             entries.add(ModBlocks.MAPLE_LOG);
             entries.add(ModBlocks.MAPLE_WOOD);
             entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
             entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
-            entries.add(ModBlocks.MAPLE_LEAVES); // Todo: Create custom item group
+            entries.add(ModBlocks.MAPLE_PLANKS);
             entries.add(ModBlocks.MAPLE_SLAB);
             entries.add(ModBlocks.MAPLE_STAIRS);
         });
