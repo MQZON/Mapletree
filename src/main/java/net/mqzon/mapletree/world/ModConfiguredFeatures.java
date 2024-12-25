@@ -10,11 +10,11 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.world.foliage.MapleFoliagePlacer;
 
 public class ModConfiguredFeatures {
 
@@ -25,8 +25,14 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
                 new StraightTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
-                // Todo: Implement custom foliage placer
-                new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
+                new MapleFoliagePlacer(
+                        ConstantIntProvider.create(4),
+                        ConstantIntProvider.create(2),
+                        ConstantIntProvider.create(7),
+                        0.75F,
+                        0.75F,
+                        0F,
+                        0F),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).build());
     }

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.item.ModItems;
+import net.mqzon.mapletree.world.foliage.ModFoliagePlacerTypes;
 import net.mqzon.mapletree.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ public class Mapletree implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModFoliagePlacerTypes.register();
 		ModWorldGeneration.generateModWorldGen();
 	}
 }

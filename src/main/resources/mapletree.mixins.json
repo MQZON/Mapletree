@@ -3,7 +3,8 @@
 	"package": "net.mqzon.mapletree.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"FoliagePlacerTypeInvoker"
 	],
 	"injectors": {
 		"defaultRequire": 1
