@@ -6,6 +6,12 @@
     "mapletree:stripped_maple_wood",
     "mapletree:maple_planks",
     "mapletree:maple_slab",
-    "mapletree:maple_stairs"
+    "mapletree:maple_stairs",
+    "mapletree:maple_fence",
+    "mapletree:maple_fence_gate",
+    "mapletree:maple_door",
+    "mapletree:maple_trapdoor",
+    "mapletree:maple_pressure_plate",
+    "mapletree:maple_button"
   ]
 }

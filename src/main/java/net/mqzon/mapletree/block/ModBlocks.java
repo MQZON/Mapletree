@@ -39,12 +39,22 @@ public class ModBlocks {
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).requiresTool()));
 
-
     public static final Block MAPLE_SLAB = registerBlock("maple_slab",
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
-
     public static final Block MAPLE_STAIRS = registerBlock("maple_stairs",
             new StairsBlock(MAPLE_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block MAPLE_FENCE = registerBlock("maple_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE)));
+    public static final Block MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
+            new FenceGateBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_FENCE_GATE)));
+    public static final Block MAPLE_DOOR = registerBlock("maple_door",
+            new DoorBlock(WoodType.OAK.setType(), AbstractBlock.Settings.copy(Blocks.OAK_DOOR)));
+    public static final Block MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
+            new TrapdoorBlock(WoodType.OAK.setType(),AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)));
+    public static final Block MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
+            new PressurePlateBlock(WoodType.OAK.setType(), AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)));
+    public static final Block MAPLE_BUTTON = registerBlock("maple_button",
+            new ButtonBlock(WoodType.OAK.setType(), 15, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -72,6 +82,12 @@ public class ModBlocks {
             entries.add(ModBlocks.MAPLE_PLANKS);
             entries.add(ModBlocks.MAPLE_SLAB);
             entries.add(ModBlocks.MAPLE_STAIRS);
+            entries.add(ModBlocks.MAPLE_FENCE);
+            entries.add(ModBlocks.MAPLE_FENCE_GATE);
+            entries.add(ModBlocks.MAPLE_DOOR);
+            entries.add(ModBlocks.MAPLE_TRAPDOOR);
+            entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
+            entries.add(ModBlocks.MAPLE_BUTTON);
         });
 
         StrippableBlockRegistry.register(MAPLE_LOG, STRIPPED_MAPLE_LOG);
@@ -89,5 +105,7 @@ public class ModBlocks {
         FlammableBlocks.add(MAPLE_PLANKS,5, 20);
         FlammableBlocks.add(MAPLE_SLAB,5, 20);
         FlammableBlocks.add(MAPLE_STAIRS,5, 20);
+        FlammableBlocks.add(MAPLE_FENCE,5, 20);
+        FlammableBlocks.add(MAPLE_FENCE_GATE,5, 20);
     }
 }

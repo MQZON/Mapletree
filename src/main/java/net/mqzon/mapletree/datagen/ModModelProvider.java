@@ -30,6 +30,14 @@ public class ModModelProvider extends FabricModelProvider {
         maplePool.slab(ModBlocks.MAPLE_SLAB);
         maplePool.stairs(ModBlocks.MAPLE_STAIRS);
 
+        maplePool.fence(ModBlocks.MAPLE_FENCE);
+        maplePool.fenceGate(ModBlocks.MAPLE_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.MAPLE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.MAPLE_TRAPDOOR);
+        maplePool.pressurePlate(ModBlocks.MAPLE_PRESSURE_PLATE);
+        maplePool.button(ModBlocks.MAPLE_BUTTON);
+
+
     }
 
     @Override

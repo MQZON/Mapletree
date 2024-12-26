@@ -54,6 +54,23 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.MAPLE_PLANKS);
 
+        getOrCreateTagBuilder(BlockTags.SLABS).add(ModBlocks.MAPLE_SLAB);
+        getOrCreateTagBuilder(BlockTags.STAIRS).add(ModBlocks.MAPLE_STAIRS);
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.MAPLE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.MAPLE_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.DOORS).add(ModBlocks.MAPLE_DOOR);
+        getOrCreateTagBuilder(BlockTags.TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.BUTTONS).add(ModBlocks.MAPLE_BUTTON);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(ModBlocks.MAPLE_SLAB);
+        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(ModBlocks.MAPLE_STAIRS);
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(ModBlocks.MAPLE_FENCE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(ModBlocks.MAPLE_DOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(ModBlocks.MAPLE_TRAPDOOR);
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE);
+        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.MAPLE_BUTTON);
+
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.MAPLE_LEAVES)
                 .add(ModBlocks.RED_MAPLE_LEAVES);
@@ -65,6 +82,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_MAPLE_WOOD)
                 .add(ModBlocks.MAPLE_PLANKS)
                 .add(ModBlocks.MAPLE_SLAB)
-                .add(ModBlocks.MAPLE_STAIRS);
+                .add(ModBlocks.MAPLE_STAIRS)
+                .add(ModBlocks.MAPLE_FENCE)
+                .add(ModBlocks.MAPLE_FENCE_GATE)
+                .add(ModBlocks.MAPLE_DOOR)
+                .add(ModBlocks.MAPLE_TRAPDOOR)
+                .add(ModBlocks.MAPLE_PRESSURE_PLATE)
+                .add(ModBlocks.MAPLE_BUTTON);
     }
 }
