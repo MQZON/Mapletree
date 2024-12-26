@@ -17,6 +17,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerSingleton(ModBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerSingleton(ModBlocks.RED_MAPLE_LEAVES, TexturedModel.LEAVES);
 
         blockStateModelGenerator.registerLog(ModBlocks.MAPLE_LOG)
                 .log(ModBlocks.MAPLE_LOG).wood(ModBlocks.MAPLE_WOOD);

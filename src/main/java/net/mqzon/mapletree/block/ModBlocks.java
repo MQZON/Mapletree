@@ -11,6 +11,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
+import net.mqzon.mapletree.particle.ModParticles;
 import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
@@ -19,7 +21,10 @@ public class ModBlocks {
             new SaplingBlock(ModSaplingGenerators.MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+            new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES), ModParticles.MAPLE_LEAVES_PARTICLE));
+
+    public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
+            new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES), ModParticles.RED_MAPLE_LEAVES_PARTICLE));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).requiresTool()));
@@ -57,6 +62,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.MAPLE_SAPLING); // Todo: Create custom item group
             entries.add(ModBlocks.MAPLE_LEAVES);
+            entries.add(ModBlocks.RED_MAPLE_LEAVES);
             entries.add(ModBlocks.MAPLE_LOG);
             entries.add(ModBlocks.MAPLE_WOOD);
             entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
@@ -71,6 +77,7 @@ public class ModBlocks {
 
         FlammableBlockRegistry FlammableBlocks = FlammableBlockRegistry.getDefaultInstance();
         FlammableBlocks.add(MAPLE_LEAVES, 30, 60);
+        FlammableBlocks.add(RED_MAPLE_LEAVES, 30, 60);
 
         FlammableBlocks.add(MAPLE_LOG, 5, 5);
         FlammableBlocks.add(MAPLE_WOOD, 5, 5);
