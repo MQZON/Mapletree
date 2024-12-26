@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "mapletree:block/maple_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "mapletree:block/maple_wood"
+    },
+    "axis=z": {
+      "model": "mapletree:block/maple_wood",
+      "x": 90
+    }
+  }
+}
