@@ -1,3 +1,6 @@
 {
-  "parent": "mapletree:block/red_maple_sapling"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mapletree:block/red_maple_sapling"
+  }
 }
