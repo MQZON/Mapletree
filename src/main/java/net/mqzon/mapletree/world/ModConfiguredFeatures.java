@@ -19,12 +19,28 @@ import net.mqzon.mapletree.world.foliage.MapleFoliagePlacer;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE = registryKey("maple");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_MAPLE = registryKey("red_maple");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
                 new StraightTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
+                new MapleFoliagePlacer(
+                        ConstantIntProvider.create(4),
+                        ConstantIntProvider.create(2),
+                        ConstantIntProvider.create(7),
+                        0.75F,
+                        0.75F,
+                        0F,
+                        0F),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).build());
+
+        register(context, RED_MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(7, 2, 0),
+                BlockStateProvider.of(ModBlocks.RED_MAPLE_LEAVES),
                 new MapleFoliagePlacer(
                         ConstantIntProvider.create(4),
                         ConstantIntProvider.create(2),

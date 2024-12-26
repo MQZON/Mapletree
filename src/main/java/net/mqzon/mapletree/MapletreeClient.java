@@ -12,6 +12,7 @@ public class MapletreeClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAPLE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_MAPLE_SAPLING, RenderLayer.getCutout());
         ParticleFactoryRegistry.getInstance().register(ModParticles.MAPLE_LEAVES_PARTICLE, MapleLeavesParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.RED_MAPLE_LEAVES_PARTICLE, MapleLeavesParticle.Factory::new);
     }

@@ -19,10 +19,11 @@ public class ModBlocks {
 
     public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
             new SaplingBlock(ModSaplingGenerators.MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+    public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
+            new SaplingBlock(ModSaplingGenerators.RED_MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
             new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES), ModParticles.MAPLE_LEAVES_PARTICLE));
-
     public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
             new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES), ModParticles.RED_MAPLE_LEAVES_PARTICLE));
 
@@ -61,6 +62,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.MAPLE_SAPLING); // Todo: Create custom item group
+            entries.add(ModBlocks.RED_MAPLE_SAPLING);
             entries.add(ModBlocks.MAPLE_LEAVES);
             entries.add(ModBlocks.RED_MAPLE_LEAVES);
             entries.add(ModBlocks.MAPLE_LOG);
