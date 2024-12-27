@@ -1,8 +1,9 @@
-// 1.21	2024-12-27T14:40:54.9594725	Mapletree/Model Definitions
+// 1.21	2024-12-27T15:03:56.834558	Mapletree/Model Definitions
 9990629d4543944f8da22e09ac4bb751ce40accd assets\mapletree\blockstates\maple_slab.json
 79446779eebc6724bed1292423a01f86c794449d assets\mapletree\models\block\maple_door_bottom_right.json
 8353dce6fcca5d8d1d9c1f174695e27e37474855 assets\mapletree\models\item\maple_button.json
 faae0a42d275854dcaac7d63cd694a539d1f8ccb assets\mapletree\models\block\red_maple_sapling.json
+9ab927c7f5d35a4d4e8aacd65b31a6620262f648 assets\mapletree\models\item\maple_boat.json
 fcde424d13e59833502fa3a3bfe64b7130153d3b assets\mapletree\models\item\maple_pressure_plate.json
 f5ed31e1c9c22b780df8ad8c2d7f9ae07980dd0a assets\mapletree\blockstates\maple_stairs.json
 2b9ced695d90d430562d3b08fbac0d5bd61eb90e assets\mapletree\blockstates\maple_door.json
@@ -44,6 +45,7 @@ b93132933cde04aa4e2994c2222981a500bd2f5b assets\mapletree\models\block\stripped_
 c2c0d4ad71d59b827d4d85b1dc65a56a66798b38 assets\mapletree\models\block\maple_log.json
 13e87eda7306df22f716398e5431cdaef06de9ba assets\mapletree\blockstates\maple_fence.json
 7baf436e5b400556467d460cf5aa798249518f54 assets\mapletree\models\block\maple_trapdoor_bottom.json
+f42bccbe56047de675162e3d1ecfb146c35d8598 assets\mapletree\models\item\maple_chest_boat.json
 b6e6df8d2ecafdfa24835ded05e762979bb78e99 assets\mapletree\models\block\maple_leaves.json
 90a0b7a8b79a5f97bb1a7e1b82f0532a5c4a3989 assets\mapletree\models\block\maple_pressure_plate_down.json
 039d587fe8deba7192844be23a4ecb131ea489a5 assets\mapletree\models\item\maple_sign.json
@@ -55,8 +57,8 @@ b6e6df8d2ecafdfa24835ded05e762979bb78e99 assets\mapletree\models\block\maple_lea
 83d3f33b109fcdde095c3823075e87b07406722f assets\mapletree\models\item\maple_wood.json
 27a0aae9dc0d11398aa2908158ad40e305d28236 assets\mapletree\blockstates\potted_maple_sapling.json
 c6f919486658b948716cb377c8bd06ee8d35a0ac assets\mapletree\models\item\maple_fence.json
-23110d55324518023522e6cb5e59283666c0abad assets\mapletree\blockstates\stripped_maple_log.json
 bac87f6b7b0a66f721e105002c83fc95f69dadcc assets\mapletree\blockstates\maple_log.json
+23110d55324518023522e6cb5e59283666c0abad assets\mapletree\blockstates\stripped_maple_log.json
 6a0dc5b7cc2a0816802731775331e247d40e656f assets\mapletree\models\item\maple_planks.json
 371a19c7410396273dd33b778cef8a7b9bdeb9bb assets\mapletree\models\block\stripped_maple_log_horizontal.json
 d90383892a6dfa75466cb42c974219f5d4b3d18b assets\mapletree\blockstates\red_maple_sapling.json

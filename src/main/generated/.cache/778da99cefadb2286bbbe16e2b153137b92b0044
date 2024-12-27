@@ -1,4 +1,4 @@
-// 1.21	2024-12-27T14:40:54.9584717	Mapletree/Tags for minecraft:block
+// 1.21	2024-12-27T15:03:56.8335593	Mapletree/Tags for minecraft:block
 11db110c12c4a2e9b916c4b8601c2e4224441dd5 data\minecraft\tags\block\fence_gates.json
 7ad82e26527293cf3e1ceeaa76d5224b2cb34072 data\minecraft\tags\block\overworld_natural_logs.json
 2656b9142d14d51a2fd1d4befd28870c7d26cce6 data\minecraft\tags\block\wooden_pressure_plates.json
@@ -32,5 +32,5 @@ e138562f72f7459051f83833edae79507a7b3f79 data\minecraft\tags\block\slabs.json
 37a9b197cf75b7ef036f20d5e84500f4b402000a data\minecraft\tags\block\ceiling_hanging_signs.json
 b4e21998a86d51ed30d7c93711132e94b5444be0 data\minecraft\tags\block\buttons.json
 8e3debc057671bd476ce031d55b1d5ff37d6006f data\minecraft\tags\block\wooden_stairs.json
-2602acb590a1c00a2426d331303a29e88d4eb5af data\minecraft\tags\block\wooden_fences.json
 2656b9142d14d51a2fd1d4befd28870c7d26cce6 data\minecraft\tags\block\pressure_plates.json
+2602acb590a1c00a2426d331303a29e88d4eb5af data\minecraft\tags\block\wooden_fences.json

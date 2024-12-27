@@ -1,4 +1,4 @@
-// 1.21	2024-12-27T14:40:54.9624812	Mapletree/Recipes
+// 1.21	2024-12-27T15:03:56.8369166	Mapletree/Recipes
 c4a01f7796956019e10c09910745de1294659ad5 data\mapletree\advancement\recipes\building_blocks\stripped_maple_wood.json
 560eeb55490bef0bb10ef1479d7257311a33c7e4 data\mapletree\recipe\maple_sign.json
 8cbcbc1fbb2d30372fa2369d049a66428c31e908 data\mapletree\advancement\recipes\decorations\maple_hanging_sign.json
@@ -6,7 +6,9 @@ c4a01f7796956019e10c09910745de1294659ad5 data\mapletree\advancement\recipes\buil
 eca07338c464857e9c7c6d279c8473c0ab9648bd data\mapletree\recipe\maple_stairs.json
 459dbb94a00284e20fca8c53401d26bbab4a803d data\mapletree\advancement\recipes\building_blocks\maple_planks.json
 0f6c5bb74ba3036a8a7424f5567d354137ed5651 data\mapletree\advancement\recipes\redstone\maple_door.json
+3419dd81c2791e3f3b6088267b631eff6df156c1 data\mapletree\advancement\recipes\transportation\maple_chest_boat.json
 5acc7d356023e8632821d5bf6fb5c921ab2a0e7b data\mapletree\advancement\recipes\building_blocks\maple_slab.json
+94a9eac18efee162061c012ea3cc7cf2a4098a9c data\mapletree\recipe\maple_boat.json
 be1d725c49b72c52859f15e63b44286f974b4722 data\mapletree\advancement\recipes\building_blocks\maple_stairs.json
 957d32ee159b880e2e03a4361e161c2e528d099e data\mapletree\recipe\maple_fence.json
 f17f84eb05ab478eb19344ca78dc2f5a67eb63e5 data\mapletree\recipe\maple_trapdoor.json
@@ -20,6 +22,8 @@ a74bf1588e463b029de920894514e0c512e71e0f data\mapletree\advancement\recipes\deco
 27fdfa2e26fbe2f5cfefc242fa701d12afb10376 data\mapletree\recipe\maple_slab.json
 e993a7a8e4834e99c5b29994e30995c2a9597b41 data\mapletree\advancement\recipes\redstone\maple_trapdoor.json
 ae1eb580f76e8ea7f7ba875285549af614c2d3be data\mapletree\recipe\maple_door.json
+8e046dfa941aedabe47ef173602edff37f3b1677 data\mapletree\advancement\recipes\transportation\maple_boat.json
+50d849dbba87113e557e7ff2e78d8355f0613f93 data\mapletree\recipe\maple_chest_boat.json
 395ab563b37c950f22dc11a71787496b5d1bb240 data\mapletree\advancement\recipes\building_blocks\maple_wood.json
 f788b837fc5a039c1f724a5e7ca4476afb185339 data\mapletree\advancement\recipes\misc\maple_button_from_maple_planks.json
 1a5351a54b7c2a9f993e4203f23f38f538b7baef data\mapletree\advancement\recipes\redstone\maple_fence_gate.json
