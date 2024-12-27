@@ -60,6 +60,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.MAPLE_BUTTON);
 
+        getOrCreateTagBuilder(ModTags.Blocks.MAPLE_SIGNS)
+                .add(ModBlocks.MAPLE_STANDING_SIGN)
+                .add(ModBlocks.MAPLE_WALL_SIGN)
+                .add(ModBlocks.MAPLE_HANGING_SIGN)
+                .add(ModBlocks.MAPLE_WALL_HANGING_SIGN);
+
+        getOrCreateTagBuilder(BlockTags.STANDING_SIGNS).add(ModBlocks.MAPLE_STANDING_SIGN);
+        getOrCreateTagBuilder(BlockTags.WALL_SIGNS).add(ModBlocks.MAPLE_WALL_SIGN);
+        getOrCreateTagBuilder(BlockTags.SIGNS).add(ModBlocks.MAPLE_STANDING_SIGN).add(ModBlocks.MAPLE_WALL_SIGN);
+        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS).add(ModBlocks.MAPLE_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS).add(ModBlocks.MAPLE_WALL_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.ALL_HANGING_SIGNS).add(ModBlocks.MAPLE_HANGING_SIGN).add(ModBlocks.MAPLE_WALL_HANGING_SIGN);
+        getOrCreateTagBuilder(BlockTags.ALL_SIGNS).addTag(ModTags.Blocks.MAPLE_SIGNS);
+
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).addTag(ModTags.Blocks.MAPLE_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
@@ -72,6 +86,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAPLE_DOOR)
                 .add(ModBlocks.MAPLE_TRAPDOOR)
                 .add(ModBlocks.MAPLE_PRESSURE_PLATE)
-                .add(ModBlocks.MAPLE_BUTTON);
+                .add(ModBlocks.MAPLE_BUTTON)
+                .addTag(ModTags.Blocks.MAPLE_SIGNS);
     }
 }

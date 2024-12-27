@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -37,5 +38,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAPLE_TRAPDOOR);
         addDrop(ModBlocks.MAPLE_PRESSURE_PLATE);
         addDrop(ModBlocks.MAPLE_BUTTON);
+
+        addDrop(ModBlocks.MAPLE_STANDING_SIGN, drops(ModItems.MAPLE_SIGN));
+        addDrop(ModBlocks.MAPLE_WALL_SIGN, drops(ModItems.MAPLE_SIGN));
+        addDrop(ModBlocks.MAPLE_HANGING_SIGN, drops(ModItems.MAPLE_HANGING_SIGN));
+        addDrop(ModBlocks.MAPLE_WALL_HANGING_SIGN, drops(ModItems.MAPLE_HANGING_SIGN));
     }
 }

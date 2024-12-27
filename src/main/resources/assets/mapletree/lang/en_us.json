@@ -10,21 +10,24 @@
   "block.mapletree.potted_red_maple_sapling": "Potted Red Maple Sapling",
   "block.mapletree.maple_leaves": "Maple Leaves",
   "block.mapletree.red_maple_leaves": "Red Maple Leaves",
+
   "block.mapletree.maple_log": "Maple Log",
   "block.mapletree.maple_wood": "Maple Wood",
   "block.mapletree.stripped_maple_log": "Stripped Maple Log",
   "block.mapletree.stripped_maple_wood": "Stripped Maple Wood",
+
   "block.mapletree.maple_planks": "Maple Planks",
 
-  "block.mapletree.maple_stairs": "Maple Stairs",
   "block.mapletree.maple_slab": "Maple Slab",
+  "block.mapletree.maple_stairs": "Maple Stairs",
   "block.mapletree.maple_fence": "Maple Fence",
   "block.mapletree.maple_fence_gate": "Maple Fence Gate",
   "block.mapletree.maple_door": "Maple Door",
   "block.mapletree.maple_trapdoor": "Maple Trapdoor",
   "block.mapletree.maple_pressure_plate": "Maple Pressure Plate",
   "block.mapletree.maple_button": "Maple Button",
-  "block.mapletree.maple_sign": "Maple Sign",
+
+  "block.mapletree.maple_standing_sign": "Maple Sign",
   "block.mapletree.maple_hanging_sign": "Maple Hanging Sign",
 
   "item.mapletree.maple_boat": "Maple Boat",

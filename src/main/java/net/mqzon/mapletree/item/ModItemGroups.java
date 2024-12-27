@@ -33,6 +33,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAPLE_TRAPDOOR);
                         entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
                         entries.add(ModBlocks.MAPLE_BUTTON);
+                        entries.add(ModItems.MAPLE_SIGN);
+                        entries.add(ModItems.MAPLE_HANGING_SIGN);
                     }).build());
 
     public static void registerItemGroups() {

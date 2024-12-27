@@ -8,6 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -35,5 +36,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         createTrapdoorRecipe(ModBlocks.MAPLE_TRAPDOOR, MAPLE_PLANKS_INGREDIENT).criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
         offerPressurePlateRecipe(exporter, ModBlocks.MAPLE_PRESSURE_PLATE, ModBlocks.MAPLE_PLANKS);
         offerShapelessRecipe(exporter, ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS, "wooden_button", 1);
+        createSignRecipe(ModItems.MAPLE_SIGN, MAPLE_PLANKS_INGREDIENT).criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+        offerHangingSignRecipe(exporter, ModItems.MAPLE_HANGING_SIGN, ModBlocks.STRIPPED_MAPLE_LOG);
     }
 }

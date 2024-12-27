@@ -1,8 +1,14 @@
 package net.mqzon.mapletree.block;
 
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -58,6 +64,24 @@ public class ModBlocks {
             new PressurePlateBlock(WoodType.OAK.setType(), AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR)));
     public static final Block MAPLE_BUTTON = registerBlock("maple_button",
             new ButtonBlock(WoodType.OAK.setType(), 15, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
+
+    public static final Identifier MAPLE_SIGN_TEXTURE = Identifier.of(Mapletree.MOD_ID, "entity/signs/maple");
+    public static final Identifier MAPLE_HANGING_SIGN_TEXTURE = Identifier.of(Mapletree.MOD_ID, "entity/signs/hanging/maple");
+    public static final Identifier MAPLE_HANGING_GUI_SIGN_TEXTURE = Identifier.of(Mapletree.MOD_ID, "textures/gui/hanging_signs/maple");
+
+    public static final Block MAPLE_STANDING_SIGN = registerBlock("maple_standing_sign",
+            new TerraformSignBlock(MAPLE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
+    public static final Block MAPLE_WALL_SIGN = registerBlock("maple_wall_sign",
+            new TerraformWallSignBlock(MAPLE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+    public static final Block MAPLE_HANGING_SIGN = registerBlock("maple_hanging_sign",
+            new TerraformHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+    public static final Block MAPLE_WALL_HANGING_SIGN = registerBlock("maple_wall_hanging_sign",
+            new TerraformWallHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+
+    public static final BlockFamily MAPLE_FAMILY =BlockFamilies.register(MAPLE_PLANKS)
+            .sign(MAPLE_STANDING_SIGN, MAPLE_WALL_SIGN)
+            .group("wooden").unlockCriterionName("has_planks").build();
+
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Mapletree.MOD_ID, name), block);

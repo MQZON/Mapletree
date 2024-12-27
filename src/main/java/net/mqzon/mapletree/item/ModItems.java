@@ -1,16 +1,24 @@
 package net.mqzon.mapletree.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.HangingSignItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SignItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.block.ModBlocks;
 
 public class ModItems {
 
     public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings()));
+
+    public static final Item MAPLE_SIGN = registerItem("maple_sign",
+            new SignItem(new Item.Settings().maxCount(16), ModBlocks.MAPLE_STANDING_SIGN, ModBlocks.MAPLE_WALL_SIGN));
+    public static final Item MAPLE_HANGING_SIGN = registerItem("maple_hanging_sign",
+            new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Mapletree.MOD_ID, name), item);

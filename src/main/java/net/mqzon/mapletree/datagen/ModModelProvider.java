@@ -37,10 +37,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.MAPLE_TRAPDOOR);
         maplePool.pressurePlate(ModBlocks.MAPLE_PRESSURE_PLATE);
         maplePool.button(ModBlocks.MAPLE_BUTTON);
+        maplePool.family(ModBlocks.MAPLE_FAMILY);
+        blockStateModelGenerator.registerHangingSign(ModBlocks.STRIPPED_MAPLE_LOG, ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_WALL_HANGING_SIGN);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
     }
 }
