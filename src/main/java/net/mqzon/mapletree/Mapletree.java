@@ -3,6 +3,7 @@ package net.mqzon.mapletree;
 import net.fabricmc.api.ModInitializer;
 
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.item.ModItemGroups;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;
 import net.mqzon.mapletree.world.foliage.ModFoliagePlacerTypes;
@@ -17,7 +18,7 @@ public class Mapletree implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModParticles.registerParticles();
-
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 

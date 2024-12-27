@@ -1,12 +1,10 @@
 package net.mqzon.mapletree.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -77,26 +75,6 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         Mapletree.LOGGER.info("Registering Mod Blocks for " +Mapletree.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.MAPLE_SAPLING); // Todo: Create custom item group
-            entries.add(ModBlocks.RED_MAPLE_SAPLING);
-            entries.add(ModBlocks.MAPLE_LEAVES);
-            entries.add(ModBlocks.RED_MAPLE_LEAVES);
-            entries.add(ModBlocks.MAPLE_LOG);
-            entries.add(ModBlocks.MAPLE_WOOD);
-            entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
-            entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
-            entries.add(ModBlocks.MAPLE_PLANKS);
-            entries.add(ModBlocks.MAPLE_SLAB);
-            entries.add(ModBlocks.MAPLE_STAIRS);
-            entries.add(ModBlocks.MAPLE_FENCE);
-            entries.add(ModBlocks.MAPLE_FENCE_GATE);
-            entries.add(ModBlocks.MAPLE_DOOR);
-            entries.add(ModBlocks.MAPLE_TRAPDOOR);
-            entries.add(ModBlocks.MAPLE_PRESSURE_PLATE);
-            entries.add(ModBlocks.MAPLE_BUTTON);
-        });
 
         StrippableBlockRegistry.register(MAPLE_LOG, STRIPPED_MAPLE_LOG);
         StrippableBlockRegistry.register(MAPLE_WOOD, STRIPPED_MAPLE_WOOD);
