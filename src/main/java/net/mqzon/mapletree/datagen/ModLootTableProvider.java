@@ -17,6 +17,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAPLE_SAPLING);
         addDrop(ModBlocks.RED_MAPLE_SAPLING);
 
+        addDrop(ModBlocks.POTTED_MAPLE_SAPLING, pottedPlantDrops(ModBlocks.MAPLE_SAPLING));
+        addDrop(ModBlocks.POTTED_RED_MAPLE_SAPLING, pottedPlantDrops(ModBlocks.RED_MAPLE_SAPLING));
+
         addDrop(ModBlocks.MAPLE_LEAVES, leavesDrops(ModBlocks.MAPLE_LEAVES, ModBlocks.MAPLE_SAPLING, 0.0625f));
         addDrop(ModBlocks.RED_MAPLE_LEAVES, leavesDrops(ModBlocks.RED_MAPLE_LEAVES, ModBlocks.RED_MAPLE_SAPLING, 0.0625f));
 

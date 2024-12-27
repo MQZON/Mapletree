@@ -22,6 +22,11 @@ public class ModBlocks {
     public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
             new SaplingBlock(ModSaplingGenerators.RED_MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
+    public static final Block POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
+            new FlowerPotBlock(MAPLE_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)));
+    public static final Block POTTED_RED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_red_maple_sapling",
+            new FlowerPotBlock(RED_MAPLE_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)));
+
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
             new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES), ModParticles.MAPLE_LEAVES_PARTICLE));
     public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
@@ -56,6 +61,9 @@ public class ModBlocks {
     public static final Block MAPLE_BUTTON = registerBlock("maple_button",
             new ButtonBlock(WoodType.OAK.setType(), 15, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON)));
 
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, Identifier.of(Mapletree.MOD_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

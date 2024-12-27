@@ -1,4 +1,4 @@
-// 1.21	2024-12-26T13:49:43.5811786	Mapletree/Block Loot Tables
+// 1.21	2024-12-26T16:31:39.1230272	Mapletree/Block Loot Tables
 29990f846c820726ff440406ebbb48ae3f6233ea data\mapletree\loot_table\blocks\maple_slab.json
 ef32d5baa1dc178da63577caff0b61b7a64e286e data\mapletree\loot_table\blocks\maple_fence_gate.json
 ffda3a53bb7f24aa65f593b32e8f42a00efc1b0c data\mapletree\loot_table\blocks\maple_trapdoor.json
@@ -9,7 +9,9 @@ f892068258770503741c126bd196f30e742dfd3c data\mapletree\loot_table\blocks\maple_
 ef2f832140a7e908e95f7508dabb67ea9a22f6c1 data\mapletree\loot_table\blocks\stripped_maple_wood.json
 877ddee4ee2fb81ac321729114228715a35faa44 data\mapletree\loot_table\blocks\red_maple_sapling.json
 035f690f317c0f9cd477a49c38b06a5badacf5cd data\mapletree\loot_table\blocks\red_maple_leaves.json
+145ff8ba0b8f964ffb1b2b80552611459abb1777 data\mapletree\loot_table\blocks\potted_red_maple_sapling.json
 fc08ae7f6a87741c376c936c329462b5e0de98ae data\mapletree\loot_table\blocks\maple_sapling.json
+d602ae8adb7320ac3aa2df3df3f483b7948c084e data\mapletree\loot_table\blocks\potted_maple_sapling.json
 e5c026977d63ed8826914f50c4568a712b6e1c38 data\mapletree\loot_table\blocks\maple_planks.json
 be5a3bbda0fcc14bf2f70f61e0bd2944484114a3 data\mapletree\loot_table\blocks\maple_button.json
 fe520d7329df7bc8690aaeab7d7f61d0aef460bf data\mapletree\loot_table\blocks\stripped_maple_log.json

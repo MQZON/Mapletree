@@ -17,6 +17,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
 
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_MAPLE_SAPLING)
+                .add(ModBlocks.POTTED_RED_MAPLE_SAPLING);
+
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(ModBlocks.MAPLE_LEAVES)
                 .add(ModBlocks.RED_MAPLE_LEAVES);
