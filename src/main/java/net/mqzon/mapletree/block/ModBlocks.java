@@ -72,11 +72,14 @@ public class ModBlocks {
     public static final Block MAPLE_STANDING_SIGN = registerBlock("maple_standing_sign",
             new TerraformSignBlock(MAPLE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_SIGN)));
     public static final Block MAPLE_WALL_SIGN = registerBlock("maple_wall_sign",
-            new TerraformWallSignBlock(MAPLE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)));
+            new TerraformWallSignBlock(MAPLE_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN)
+                    .dropsLike(MAPLE_STANDING_SIGN)));
     public static final Block MAPLE_HANGING_SIGN = registerBlock("maple_hanging_sign",
-            new TerraformHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
+            new TerraformHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE,
+                    AbstractBlock.Settings.copy(Blocks.OAK_HANGING_SIGN)));
     public static final Block MAPLE_WALL_HANGING_SIGN = registerBlock("maple_wall_hanging_sign",
-            new TerraformWallHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)));
+            new TerraformWallHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE,
+                    AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN).dropsLike(MAPLE_HANGING_SIGN)));
 
     public static final BlockFamily MAPLE_FAMILY =BlockFamilies.register(MAPLE_PLANKS)
             .sign(MAPLE_STANDING_SIGN, MAPLE_WALL_SIGN)

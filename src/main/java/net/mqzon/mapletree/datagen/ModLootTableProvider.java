@@ -40,8 +40,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAPLE_BUTTON);
 
         addDrop(ModBlocks.MAPLE_STANDING_SIGN, drops(ModItems.MAPLE_SIGN));
-        addDrop(ModBlocks.MAPLE_WALL_SIGN, drops(ModItems.MAPLE_SIGN));
         addDrop(ModBlocks.MAPLE_HANGING_SIGN, drops(ModItems.MAPLE_HANGING_SIGN));
-        addDrop(ModBlocks.MAPLE_WALL_HANGING_SIGN, drops(ModItems.MAPLE_HANGING_SIGN));
     }
 }
