@@ -9,8 +9,8 @@ import net.mqzon.mapletree.Mapletree;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
         public static final TagKey<Block> MAPLE_LEAVES = createTag("maple_leaves");
+        public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
         public static final TagKey<Block> MAPLE_SIGNS = createTag("maple_signs");
 
         private static TagKey<Block> createTag(String name) {
@@ -18,6 +18,8 @@ public class ModTags {
         }
     }
     public static class Items {
+        public static final TagKey<Item> MAPLE_SAPLINGS = createTag("maple_saplings");
+        public static final TagKey<Item> MAPLE_LEAVES = createTag("maple_leaves");
         public static final TagKey<Item> MAPLE_LOGS = createTag("maple_logs");
 
         private static TagKey<Item> createTag(String name) {
