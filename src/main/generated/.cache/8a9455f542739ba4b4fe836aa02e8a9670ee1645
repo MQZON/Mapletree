@@ -1,3 +1,5 @@
-// 1.21	2024-12-26T16:52:22.7185948	Mapletree/Tags for minecraft:item
-957360d1b32bc7c14099c93189ef46c645d6f474 data\minecraft\tags\item\logs_that_burn.json
+// 1.21	2024-12-26T18:04:28.0075212	Mapletree/Tags for minecraft:item
+957360d1b32bc7c14099c93189ef46c645d6f474 data\mapletree\tags\item\maple_logs.json
+d40e7eb6dc0aba0789d645e02be821812fc39c6a data\minecraft\tags\item\logs_that_burn.json
+d40e7eb6dc0aba0789d645e02be821812fc39c6a data\minecraft\tags\item\logs.json
 4639c4e93818c97626ff5431d36771915f314bd2 data\minecraft\tags\item\planks.json

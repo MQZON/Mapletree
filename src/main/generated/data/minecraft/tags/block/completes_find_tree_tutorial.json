@@ -1,10 +1,6 @@
 {
   "values": [
-    "mapletree:maple_log",
-    "mapletree:maple_wood",
-    "mapletree:stripped_maple_log",
-    "mapletree:stripped_maple_wood",
-    "mapletree:maple_leaves",
-    "mapletree:red_maple_leaves"
+    "#mapletree:maple_logs",
+    "#mapletree:maple_leaves"
   ]
 }

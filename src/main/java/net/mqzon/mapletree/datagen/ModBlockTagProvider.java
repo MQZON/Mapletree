@@ -16,18 +16,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POTTED_MAPLE_SAPLING)
                 .add(ModBlocks.POTTED_RED_MAPLE_SAPLING);
 
-        getOrCreateTagBuilder(BlockTags.LEAVES)
+        getOrCreateTagBuilder(ModTags.Blocks.MAPLE_LEAVES)
                 .add(ModBlocks.MAPLE_LEAVES)
                 .add(ModBlocks.RED_MAPLE_LEAVES);
-
-        getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES)
-                .add(ModBlocks.MAPLE_LEAVES)
-                .add(ModBlocks.RED_MAPLE_LEAVES);
+        getOrCreateTagBuilder(BlockTags.LEAVES).addTag(ModTags.Blocks.MAPLE_LEAVES);
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES).addTag(ModTags.Blocks.MAPLE_LEAVES);
 
         getOrCreateTagBuilder(ModTags.Blocks.MAPLE_LOGS)
                 .add(ModBlocks.MAPLE_LOG)
@@ -38,23 +35,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.OVERWORLD_NATURAL_LOGS).add(ModBlocks.MAPLE_LOG);
 
         getOrCreateTagBuilder(BlockTags.COMPLETES_FIND_TREE_TUTORIAL)
-                .add(ModBlocks.MAPLE_LOG)
-                .add(ModBlocks.MAPLE_WOOD)
-                .add(ModBlocks.STRIPPED_MAPLE_LOG)
-                .add(ModBlocks.STRIPPED_MAPLE_WOOD)
-                .add(ModBlocks.MAPLE_LEAVES)
-                .add(ModBlocks.RED_MAPLE_LEAVES);
+                .addTag(ModTags.Blocks.MAPLE_LOGS)
+                .addTag(ModTags.Blocks.MAPLE_LEAVES);
 
-        getOrCreateTagBuilder(BlockTags.LOGS)
-                .add(ModBlocks.MAPLE_LOG)
-                .add(ModBlocks.MAPLE_WOOD)
-                .add(ModBlocks.STRIPPED_MAPLE_LOG)
-                .add(ModBlocks.STRIPPED_MAPLE_WOOD);
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
-                .add(ModBlocks.MAPLE_LOG)
-                .add(ModBlocks.MAPLE_WOOD)
-                .add(ModBlocks.STRIPPED_MAPLE_LOG)
-                .add(ModBlocks.STRIPPED_MAPLE_WOOD);
+        getOrCreateTagBuilder(BlockTags.LOGS).addTag(ModTags.Blocks.MAPLE_LOGS);
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN).addTag(ModTags.Blocks.MAPLE_LOGS);
 
         getOrCreateTagBuilder(BlockTags.PLANKS).add(ModBlocks.MAPLE_PLANKS);
 
@@ -75,15 +60,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(ModBlocks.MAPLE_PRESSURE_PLATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(ModBlocks.MAPLE_BUTTON);
 
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(ModBlocks.MAPLE_LEAVES)
-                .add(ModBlocks.RED_MAPLE_LEAVES);
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).addTag(ModTags.Blocks.MAPLE_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
-                .add(ModBlocks.MAPLE_LOG)
-                .add(ModBlocks.MAPLE_WOOD)
-                .add(ModBlocks.STRIPPED_MAPLE_LOG)
-                .add(ModBlocks.STRIPPED_MAPLE_WOOD)
+                .addTag(ModTags.Blocks.MAPLE_LOGS)
                 .add(ModBlocks.MAPLE_PLANKS)
                 .add(ModBlocks.MAPLE_SLAB)
                 .add(ModBlocks.MAPLE_STAIRS)
