@@ -7,6 +7,7 @@ import net.mqzon.mapletree.entity.ModBoats;
 import net.mqzon.mapletree.item.ModItemGroups;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;
+import net.mqzon.mapletree.util.ModCustomTrades;
 import net.mqzon.mapletree.world.foliage.ModFoliagePlacerTypes;
 import net.mqzon.mapletree.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -23,6 +24,8 @@ public class Mapletree implements ModInitializer {
 		ModBoats.registerBoats();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModCustomTrades.registerCustomTrades();
 
 		ModFoliagePlacerTypes.register();
 		ModWorldGeneration.generateModWorldGen();
