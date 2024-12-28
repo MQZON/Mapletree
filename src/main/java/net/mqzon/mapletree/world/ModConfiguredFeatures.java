@@ -1,5 +1,6 @@
 package net.mqzon.mapletree.world;
 
+import net.minecraft.block.Block;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -11,46 +12,64 @@ import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.treedecorator.BeehiveTreeDecorator;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.world.foliage.MapleFoliagePlacer;
 
+import java.util.List;
+
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE = registryKey("maple");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_BEES_005 = registryKey("maple_bees_005");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_MAPLE = registryKey("red_maple");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_MAPLE_BEES_005 = registryKey("red_maple_bees_005");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
                 new StraightTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
-                new MapleFoliagePlacer(
-                        ConstantIntProvider.create(4),
-                        ConstantIntProvider.create(2),
-                        ConstantIntProvider.create(7),
-                        0.75F,
-                        0.75F,
-                        0F,
-                        0F),
+                DefaultMapleFoliage(),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).build());
+
+        register(context, MAPLE_BEES_005, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(7, 2, 0),
+                BlockStateProvider.of(ModBlocks.MAPLE_LEAVES),
+                DefaultMapleFoliage(),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).decorators(List.of(new BeehiveTreeDecorator(0.05F))).build());
 
         register(context, RED_MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
                 new StraightTrunkPlacer(7, 2, 0),
                 BlockStateProvider.of(ModBlocks.RED_MAPLE_LEAVES),
-                new MapleFoliagePlacer(
-                        ConstantIntProvider.create(4),
-                        ConstantIntProvider.create(2),
-                        ConstantIntProvider.create(7),
-                        0.75F,
-                        0.75F,
-                        0F,
-                        0F),
+                DefaultMapleFoliage(),
                 new TwoLayersFeatureSize(1, 0, 2)
         ).build());
+
+        register(context, RED_MAPLE_BEES_005, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.MAPLE_LOG),
+                new StraightTrunkPlacer(7, 2, 0),
+                BlockStateProvider.of(ModBlocks.RED_MAPLE_LEAVES),
+                DefaultMapleFoliage(),
+                new TwoLayersFeatureSize(1, 0, 2)
+        ).decorators(List.of(new BeehiveTreeDecorator(0.05F))).build());
+    }
+
+    private static MapleFoliagePlacer DefaultMapleFoliage() {
+        return new MapleFoliagePlacer(
+                ConstantIntProvider.create(4),
+                ConstantIntProvider.create(2),
+                ConstantIntProvider.create(7),
+                0.75F,
+                0.75F,
+                0F,
+                0F);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
