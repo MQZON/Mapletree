@@ -1,4 +1,4 @@
-// 1.21	2024-12-27T16:46:31.8794486	Mapletree/Tags for minecraft:block
+// 1.21	2024-12-31T23:01:50.2741595	Mapletree/Tags for minecraft:block
 11db110c12c4a2e9b916c4b8601c2e4224441dd5 data\minecraft\tags\block\fence_gates.json
 7ad82e26527293cf3e1ceeaa76d5224b2cb34072 data\minecraft\tags\block\overworld_natural_logs.json
 2656b9142d14d51a2fd1d4befd28870c7d26cce6 data\minecraft\tags\block\wooden_pressure_plates.json
@@ -12,13 +12,14 @@ eb1f15d9629ed865afccf0b5638a7406a342df97 data\minecraft\tags\block\wooden_doors.
 eb92bd1b2f251bc5cad3c595075c7ff6256c23e8 data\minecraft\tags\block\all_hanging_signs.json
 b4e21998a86d51ed30d7c93711132e94b5444be0 data\minecraft\tags\block\wooden_buttons.json
 6cb292472d5bfbd2d5b4159239b111772678a085 data\minecraft\tags\block\completes_find_tree_tutorial.json
+37dae4c7621cc1ad4d800248bd76ffcb5b51e1f8 data\minecraft\tags\block\wool_carpets.json
 4639c4e93818c97626ff5431d36771915f314bd2 data\minecraft\tags\block\planks.json
 02ea427b34a3f474ea9f84eb614fb5d04a3d96f6 data\minecraft\tags\block\all_signs.json
 957360d1b32bc7c14099c93189ef46c645d6f474 data\mapletree\tags\block\maple_logs.json
 4db0bfc8ce55b56464cff32b569071e87e6947c7 data\minecraft\tags\block\standing_signs.json
 c8a0f4951b8c6a6c953a0153cbc06e45bab414b7 data\minecraft\tags\block\flower_pots.json
 6569f6392d2744eff74d43215461c4dbd62fc055 data\minecraft\tags\block\wall_hanging_signs.json
-ace424221101bc243eb0ebf21cef0c8e7d761a99 data\minecraft\tags\block\mineable\hoe.json
+244dbfed25a3b2794330a328ef757466b26d5526 data\minecraft\tags\block\mineable\hoe.json
 394c489660dd6237dc308ca699a3754aae843eca data\minecraft\tags\block\mineable\axe.json
 8e3debc057671bd476ce031d55b1d5ff37d6006f data\minecraft\tags\block\stairs.json
 ace424221101bc243eb0ebf21cef0c8e7d761a99 data\minecraft\tags\block\leaves.json

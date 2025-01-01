@@ -74,7 +74,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.ALL_HANGING_SIGNS).add(ModBlocks.MAPLE_HANGING_SIGN).add(ModBlocks.MAPLE_WALL_HANGING_SIGN);
         getOrCreateTagBuilder(BlockTags.ALL_SIGNS).addTag(ModTags.Blocks.MAPLE_SIGNS);
 
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE).addTag(ModTags.Blocks.MAPLE_LEAVES);
+        getOrCreateTagBuilder(BlockTags.WOOL_CARPETS).add(ModBlocks.MAPLE_LEAF_PILE).add(ModBlocks.RED_MAPLE_LEAF_PILE);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .addTag(ModTags.Blocks.MAPLE_LEAVES)
+                .add(ModBlocks.MAPLE_LEAF_PILE)
+                .add(ModBlocks.RED_MAPLE_LEAF_PILE);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .addTag(ModTags.Blocks.MAPLE_LOGS)

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "misc",
+  "ingredients": [
+    {
+      "item": "mapletree:red_maple_leaves"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "mapletree:red_maple_leaf_pile"
+  }
+}

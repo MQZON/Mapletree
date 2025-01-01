@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -24,6 +25,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+        offerShapelessRecipe(exporter, ModBlocks.MAPLE_LEAF_PILE, ModBlocks.MAPLE_LEAVES, "misc",8);
+        offerShapelessRecipe(exporter, ModBlocks.RED_MAPLE_LEAF_PILE, ModBlocks.RED_MAPLE_LEAVES, "misc",8);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAPLE_LEAVES).input(ModBlocks.MAPLE_LEAF_PILE, 8)
+                .criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_MAPLE_LEAVES).input(ModBlocks.RED_MAPLE_LEAF_PILE, 8)
+                .criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+
         offerBarkBlockRecipe(exporter, ModBlocks.MAPLE_WOOD, ModBlocks.MAPLE_LOG);
         offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_MAPLE_WOOD, ModBlocks.STRIPPED_MAPLE_LOG);
 

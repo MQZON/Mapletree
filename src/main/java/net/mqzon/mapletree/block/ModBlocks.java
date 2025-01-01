@@ -15,6 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
+import net.mqzon.mapletree.block.custom.LeafPileBlock;
 import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
 import net.mqzon.mapletree.particle.ModParticles;
 import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
@@ -27,6 +28,13 @@ public class ModBlocks {
     public static final Block RED_MAPLE_SAPLING = registerBlock("red_maple_sapling",
             new SaplingBlock(ModSaplingGenerators.RED_MAPLE, AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)
                     .mapColor(MapColor.RED)));
+
+    public static final Block MAPLE_LEAF_PILE = registerBlock("maple_leaf_pile",
+            new LeafPileBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.ORANGE)
+                    .sounds(LeafPileBlock.LeafPileSounds)));
+    public static final Block RED_MAPLE_LEAF_PILE = registerBlock("red_maple_leaf_pile",
+            new LeafPileBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.RED)
+                    .sounds(LeafPileBlock.LeafPileSounds)));
 
     public static final Block POTTED_MAPLE_SAPLING = registerBlockWithoutBlockItem("potted_maple_sapling",
             new FlowerPotBlock(MAPLE_SAPLING, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING)));
@@ -122,6 +130,9 @@ public class ModBlocks {
         FlammableBlockRegistry FlammableBlocks = FlammableBlockRegistry.getDefaultInstance();
         FlammableBlocks.add(MAPLE_LEAVES, 30, 60);
         FlammableBlocks.add(RED_MAPLE_LEAVES, 30, 60);
+
+        FlammableBlocks.add(MAPLE_LEAF_PILE, 60, 100);
+        FlammableBlocks.add(RED_MAPLE_LEAF_PILE, 60, 100);
 
         FlammableBlocks.add(MAPLE_LOG, 5, 5);
         FlammableBlocks.add(MAPLE_WOOD, 5, 5);
