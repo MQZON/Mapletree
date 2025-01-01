@@ -17,6 +17,7 @@ import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.custom.LeafPileBlock;
 import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
+import net.mqzon.mapletree.block.custom.MapleLog;
 import net.mqzon.mapletree.particle.ModParticles;
 import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
 
@@ -49,13 +50,13 @@ public class ModBlocks {
                     ModParticles.RED_MAPLE_LEAVES_PARTICLE));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()));
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()));
     public static final Block MAPLE_WOOD = registerBlock("maple_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()));
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()));
     public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()));
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()));
     public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()));
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()));
 
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)

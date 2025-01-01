@@ -23,9 +23,9 @@ public class ModItems {
     public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, false);
     public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, true);
 
-    public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings()));
+    public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings().maxCount(1)));
 
-    public static final Item SYRUP_BOTTLE = registerItem("syrup_bottle", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.SYRUP_BOTTLE)));
+    public static final Item SYRUP_BOTTLE = registerItem("syrup_bottle", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.SYRUP_BOTTLE).maxCount(16)));
     public static final Item GLAZED_CARROTS = registerItem("glazed_carrots", new Item(new Item.Settings().food(ModFoodComponents.GLAZED_CARROTS)));
     public static final Item GLAZED_SALMON = registerItem("glazed_salmon", new Item(new Item.Settings().food(ModFoodComponents.GLAZED_SALMON)));
     public static final Item PANCAKES = registerItem("pancakes", new Item(new Item.Settings().food(ModFoodComponents.PANCAKES)));
