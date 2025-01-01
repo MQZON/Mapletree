@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.entity.ModBoats;
+import net.mqzon.mapletree.item.custom.ModDrinkItem;
 
 public class ModItems {
 
@@ -24,6 +25,11 @@ public class ModItems {
 
     public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, false);
     public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, true);
+
+    public static final Item SYRUP_BOTTLE = registerItem("syrup_bottle", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.SYRUP_BOTTLE)));
+    public static final Item GLAZED_CARROTS = registerItem("glazed_carrots", new Item(new Item.Settings().food(ModFoodComponents.GLAZED_CARROTS)));
+    public static final Item GLAZED_SALMON = registerItem("glazed_salmon", new Item(new Item.Settings().food(ModFoodComponents.GLAZED_SALMON)));
+    public static final Item PANCAKES = registerItem("pancakes", new Item(new Item.Settings().food(ModFoodComponents.PANCAKES)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Mapletree.MOD_ID, name), item);

@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_MAPLE_LEAVES);
                         entries.add(ModBlocks.MAPLE_LEAF_PILE);
                         entries.add(ModBlocks.RED_MAPLE_LEAF_PILE);
+
                         entries.add(ModBlocks.MAPLE_LOG);
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_LOG);
@@ -39,6 +40,11 @@ public class ModItemGroups {
                         entries.add(ModItems.MAPLE_HANGING_SIGN);
                         entries.add(ModItems.MAPLE_BOAT);
                         entries.add(ModItems.MAPLE_CHEST_BOAT);
+
+                        entries.add(ModItems.SYRUP_BOTTLE);
+                        entries.add(ModItems.GLAZED_CARROTS);
+                        entries.add(ModItems.GLAZED_SALMON);
+                        entries.add(ModItems.PANCAKES);
                     }).build());
 
     public static void registerItemGroups() {

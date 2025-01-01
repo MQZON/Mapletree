@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_maple_planks": {
+    "has_maple_leaves": {
       "conditions": {
         "items": [
           {
-            "items": "mapletree:maple_planks"
+            "items": "mapletree:maple_leaves"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_maple_planks"
+      "has_maple_leaves"
     ]
   ],
   "rewards": {

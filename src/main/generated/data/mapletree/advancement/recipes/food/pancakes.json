@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_maple_leaves": {
+    "has_syrup_bottle": {
       "conditions": {
         "items": [
           {
-            "items": "mapletree:red_maple_leaves"
+            "items": "mapletree:syrup_bottle"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mapletree:red_maple_leaves"
+        "recipe": "mapletree:pancakes"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_maple_leaves"
+      "has_syrup_bottle"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mapletree:red_maple_leaves"
+      "mapletree:pancakes"
     ]
   }
 }

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -22,15 +23,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static final Ingredient MAPLE_PLANKS_INGREDIENT = Ingredient.ofItems(ModBlocks.MAPLE_PLANKS.asItem());
     public static final String HAS_MAPLE_PLANKS = hasItem(ModBlocks.MAPLE_PLANKS);
     public static final AdvancementCriterion<?> HAS_MAPLE_PLANKS_CRITERION = conditionsFromItem(ModBlocks.MAPLE_PLANKS);
+    public static final String HAS_MAPLE_LEAVES = hasItem(ModBlocks.MAPLE_LEAVES);
+    public static final AdvancementCriterion<?> HAS_MAPLE_LEAVES_CRITERION = conditionsFromItem(ModBlocks.MAPLE_LEAVES);
+    public static final String RED_HAS_MAPLE_LEAVES = hasItem(ModBlocks.RED_MAPLE_LEAVES);
+    public static final AdvancementCriterion<?> RED_HAS_MAPLE_LEAVES_CRITERION = conditionsFromItem(ModBlocks.RED_MAPLE_LEAVES);
+    public static final String HAS_SYRUP = hasItem(ModItems.SYRUP_BOTTLE);
+    public static final AdvancementCriterion<?> HAS_SYRUP_CRITERION = conditionsFromItem(ModItems.SYRUP_BOTTLE);
 
     @Override
     public void generate(RecipeExporter exporter) {
         offerShapelessRecipe(exporter, ModBlocks.MAPLE_LEAF_PILE, ModBlocks.MAPLE_LEAVES, "misc",8);
         offerShapelessRecipe(exporter, ModBlocks.RED_MAPLE_LEAF_PILE, ModBlocks.RED_MAPLE_LEAVES, "misc",8);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.MAPLE_LEAVES).input(ModBlocks.MAPLE_LEAF_PILE, 8)
-                .criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+                .criterion(HAS_MAPLE_LEAVES,HAS_MAPLE_LEAVES_CRITERION).offerTo(exporter);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RED_MAPLE_LEAVES).input(ModBlocks.RED_MAPLE_LEAF_PILE, 8)
-                .criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+                .criterion(RED_HAS_MAPLE_LEAVES,RED_HAS_MAPLE_LEAVES_CRITERION).offerTo(exporter);
 
         offerBarkBlockRecipe(exporter, ModBlocks.MAPLE_WOOD, ModBlocks.MAPLE_LOG);
         offerBarkBlockRecipe(exporter, ModBlocks.STRIPPED_MAPLE_WOOD, ModBlocks.STRIPPED_MAPLE_LOG);
@@ -48,5 +55,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerHangingSignRecipe(exporter, ModItems.MAPLE_HANGING_SIGN, ModBlocks.STRIPPED_MAPLE_LOG);
         offerBoatRecipe(exporter, ModItems.MAPLE_BOAT, ModBlocks.MAPLE_PLANKS);
         offerChestBoatRecipe(exporter, ModItems.MAPLE_CHEST_BOAT, ModItems.MAPLE_BOAT);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GLAZED_CARROTS, 3).input(ModItems.SYRUP_BOTTLE)
+                .input(Items.CARROT, 3).criterion(HAS_SYRUP, HAS_SYRUP_CRITERION).offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GLAZED_SALMON).input(ModItems.SYRUP_BOTTLE)
+                .input(Items.COOKED_SALMON).criterion(HAS_SYRUP, HAS_SYRUP_CRITERION).offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.PANCAKES).input(ModItems.SYRUP_BOTTLE)
+                .input(Items.WHEAT).input(Items.EGG).input(Items.MILK_BUCKET).criterion(HAS_SYRUP, HAS_SYRUP_CRITERION).offerTo(exporter);
     }
 }
