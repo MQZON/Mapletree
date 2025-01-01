@@ -15,9 +15,6 @@ import net.mqzon.mapletree.entity.ModBoats;
 import net.mqzon.mapletree.item.custom.ModDrinkItem;
 
 public class ModItems {
-
-    public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings()));
-
     public static final Item MAPLE_SIGN = registerItem("maple_sign",
             new SignItem(new Item.Settings().maxCount(16), ModBlocks.MAPLE_STANDING_SIGN, ModBlocks.MAPLE_WALL_SIGN));
     public static final Item MAPLE_HANGING_SIGN = registerItem("maple_hanging_sign",
@@ -25,6 +22,8 @@ public class ModItems {
 
     public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, false);
     public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID, ModBoats.MAPLE_BOAT_KEY, true);
+
+    public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings()));
 
     public static final Item SYRUP_BOTTLE = registerItem("syrup_bottle", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.SYRUP_BOTTLE)));
     public static final Item GLAZED_CARROTS = registerItem("glazed_carrots", new Item(new Item.Settings().food(ModFoodComponents.GLAZED_CARROTS)));

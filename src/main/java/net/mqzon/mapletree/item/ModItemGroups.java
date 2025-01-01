@@ -41,6 +41,8 @@ public class ModItemGroups {
                         entries.add(ModItems.MAPLE_BOAT);
                         entries.add(ModItems.MAPLE_CHEST_BOAT);
 
+                        entries.add(ModItems.SAP_BUCKET);
+
                         entries.add(ModItems.SYRUP_BOTTLE);
                         entries.add(ModItems.GLAZED_CARROTS);
                         entries.add(ModItems.GLAZED_SALMON);
