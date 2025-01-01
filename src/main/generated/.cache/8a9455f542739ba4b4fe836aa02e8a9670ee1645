@@ -1,17 +1,21 @@
-// 1.21	2025-01-01T11:50:51.4499459	Mapletree/Tags for minecraft:item
+// 1.21	2025-01-01T12:23:40.7916456	Mapletree/Tags for minecraft:item
 2602acb590a1c00a2426d331303a29e88d4eb5af data\minecraft\tags\item\fences.json
 2602acb590a1c00a2426d331303a29e88d4eb5af data\minecraft\tags\item\wooden_fences.json
 b4e21998a86d51ed30d7c93711132e94b5444be0 data\minecraft\tags\item\buttons.json
 e138562f72f7459051f83833edae79507a7b3f79 data\minecraft\tags\item\wooden_slabs.json
 28f6f1890aa4e4bf191af04d92bdcbf6bdd98003 data\minecraft\tags\item\wooden_trapdoors.json
+f817b085cdf0eef07a28de1bb3ca3c8e75836e48 data\minecraft\tags\item\pig_food.json
 ace424221101bc243eb0ebf21cef0c8e7d761a99 data\minecraft\tags\item\leaves.json
 b4e21998a86d51ed30d7c93711132e94b5444be0 data\minecraft\tags\item\wooden_buttons.json
 957360d1b32bc7c14099c93189ef46c645d6f474 data\mapletree\tags\item\maple_logs.json
 eb1f15d9629ed865afccf0b5638a7406a342df97 data\minecraft\tags\item\doors.json
 dbb59bb844944cc9c5ed2bf07798f5ba1dce60d9 data\minecraft\tags\item\completes_find_tree_tutorial.json
+f817b085cdf0eef07a28de1bb3ca3c8e75836e48 data\minecraft\tags\item\horse_food.json
+f817b085cdf0eef07a28de1bb3ca3c8e75836e48 data\minecraft\tags\item\rabbit_food.json
 d40e7eb6dc0aba0789d645e02be821812fc39c6a data\minecraft\tags\item\logs_that_burn.json
 09f714ca6c8a6ea963bee6d0a3fc83b57fb109b7 data\minecraft\tags\item\chest_boats.json
 081f24208a8ad43649db90a693d852c36870848d data\minecraft\tags\item\boats.json
+f817b085cdf0eef07a28de1bb3ca3c8e75836e48 data\minecraft\tags\item\horse_tempt_items.json
 2656b9142d14d51a2fd1d4befd28870c7d26cce6 data\minecraft\tags\item\wooden_pressure_plates.json
 8c929435c6009219dc2fb7d2dd40ebace99b2152 data\mapletree\tags\item\maple_leaves.json
 c6ce9674de311c3c903504fc5482612d61ba0619 data\minecraft\tags\item\saplings.json

@@ -1,4 +1,4 @@
-// 1.21	2025-01-01T11:50:51.4519474	Mapletree/Tags for minecraft:block
+// 1.21	2025-01-01T12:23:40.7926362	Mapletree/Tags for minecraft:block
 11db110c12c4a2e9b916c4b8601c2e4224441dd5 data\minecraft\tags\block\fence_gates.json
 7ad82e26527293cf3e1ceeaa76d5224b2cb34072 data\minecraft\tags\block\overworld_natural_logs.json
 2656b9142d14d51a2fd1d4befd28870c7d26cce6 data\minecraft\tags\block\wooden_pressure_plates.json
@@ -6,8 +6,8 @@ ace424221101bc243eb0ebf21cef0c8e7d761a99 data\minecraft\tags\block\replaceable_b
 2602acb590a1c00a2426d331303a29e88d4eb5af data\minecraft\tags\block\fences.json
 28f6f1890aa4e4bf191af04d92bdcbf6bdd98003 data\minecraft\tags\block\trapdoors.json
 0f230c19dde64dfd83925576d43482dec6b76734 data\mapletree\tags\block\maple_signs.json
-eb1f15d9629ed865afccf0b5638a7406a342df97 data\minecraft\tags\block\wooden_doors.json
 d40e7eb6dc0aba0789d645e02be821812fc39c6a data\minecraft\tags\block\logs_that_burn.json
+eb1f15d9629ed865afccf0b5638a7406a342df97 data\minecraft\tags\block\wooden_doors.json
 720812b88baa6ac0ccf5aeedbc24295c09ca4b42 data\minecraft\tags\block\wall_signs.json
 eb92bd1b2f251bc5cad3c595075c7ff6256c23e8 data\minecraft\tags\block\all_hanging_signs.json
 b4e21998a86d51ed30d7c93711132e94b5444be0 data\minecraft\tags\block\wooden_buttons.json

@@ -63,5 +63,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.BOATS).add(ModItems.MAPLE_BOAT);
         getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModItems.MAPLE_CHEST_BOAT);
+
+        getOrCreateTagBuilder(ItemTags.PIG_FOOD).add(ModItems.GLAZED_CARROTS);
+        getOrCreateTagBuilder(ItemTags.RABBIT_FOOD).add(ModItems.GLAZED_CARROTS);
+        getOrCreateTagBuilder(ItemTags.HORSE_FOOD).add(ModItems.GLAZED_CARROTS);
+        getOrCreateTagBuilder(ItemTags.HORSE_TEMPT_ITEMS).add(ModItems.GLAZED_CARROTS);
     }
 }
