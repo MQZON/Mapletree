@@ -62,26 +62,26 @@ public class ModBlocks {
                     .mapColor(MapColor.RED)));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
-            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "maple_log")))
             ));
     public static final Block MAPLE_WOOD = registerBlock("maple_wood",
-            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_WOOD).mapColor(MapColor.OAK_TAN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "maple_wood")))
             ));
     public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log",
-            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OAK_TAN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "stripped_maple_log")))
             ));
     public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood",
-            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OAK_TAN).requiresTool()
+            new MapleLog(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OAK_TAN)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "stripped_maple_wood")))
             ));
 
     public static final Block MAPLE_PLANKS = registerBlock("maple_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "maple_planks")))
-                    .mapColor(MapColor.TERRACOTTA_WHITE).requiresTool()));
+                    .mapColor(MapColor.TERRACOTTA_WHITE)));
 
     public static final Block MAPLE_SLAB = registerBlock("maple_slab",
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB).mapColor(MapColor.TERRACOTTA_WHITE)
