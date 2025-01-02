@@ -6,8 +6,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -19,7 +19,7 @@ public class MapleLog extends PillarBlock {
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (stack.isOf(Items.BUCKET)) {
             stack.decrement(1);
             player.playSound(SoundEvents.ENTITY_COW_MILK);
@@ -28,7 +28,7 @@ public class MapleLog extends PillarBlock {
             } else if (!player.getInventory().insertStack(new ItemStack(ModItems.SAP_BUCKET))) {
                 player.dropItem(new ItemStack(ModItems.SAP_BUCKET), false);
             }
-            return ItemActionResult.success(world.isClient);
+            return ActionResult.SUCCESS;
         } else {
             return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
         }

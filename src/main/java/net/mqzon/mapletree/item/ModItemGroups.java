@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.boat.ModBoats;
 
 public class ModItemGroups {
     public static final ItemGroup MAPLE_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -38,8 +39,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAPLE_BUTTON);
                         entries.add(ModItems.MAPLE_SIGN);
                         entries.add(ModItems.MAPLE_HANGING_SIGN);
-                        entries.add(ModItems.MAPLE_BOAT);
-                        entries.add(ModItems.MAPLE_CHEST_BOAT);
+                        entries.add(ModBoats.MAPLE_BOAT);
+                        entries.add(ModBoats.MAPLE_CHEST_BOAT);
 
                         entries.add(ModItems.SAP_BUCKET);
 

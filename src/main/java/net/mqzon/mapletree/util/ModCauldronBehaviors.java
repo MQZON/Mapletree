@@ -11,8 +11,8 @@ import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -29,7 +29,7 @@ public class ModCauldronBehaviors implements CauldronBehavior {
     public static CauldronBehavior.CauldronBehaviorMap SYRUP_CAULDRON_BEHAVIOR = CauldronBehavior.createMap("syrup");
 
     @Override
-    public ItemActionResult interact(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, ItemStack stack) {
+    public ActionResult interact(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, ItemStack stack) {
         return null;
     }
 
@@ -48,14 +48,14 @@ public class ModCauldronBehaviors implements CauldronBehavior {
         if (newState != state) {
             return CauldronBehavior.fillCauldron(world, pos, player, hand, stack, newState, SoundEvents.ITEM_BUCKET_EMPTY);
         }
-        return ItemActionResult.success(world.isClient());
+        return ActionResult.SUCCESS;
     };
     static CauldronBehavior ADD_SYRUP_TO_SYRUP_CAULDRON = (state, world, pos, player, hand, stack) -> {
         BlockState newState = FillableLeveledCauldronBlock.raiseFillLevel(state, world, pos);
         if (newState != state) {
             return CauldronBehavior.fillCauldron(world, pos, player, hand, stack, newState, SoundEvents.ITEM_BOTTLE_EMPTY);
         }
-        return ItemActionResult.success(world.isClient());
+        return ActionResult.SUCCESS;
     };
     static CauldronBehavior REMOVE_SAP_FROM_SAP_CAULDRON = (state, world, pos, player, hand, stack) -> {
         if (!world.isClient) {
@@ -67,7 +67,7 @@ public class ModCauldronBehaviors implements CauldronBehavior {
             world.playSound(null, pos, SoundEvents.ITEM_BUCKET_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
             world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);
         }
-        return ItemActionResult.success(world.isClient);
+        return ActionResult.SUCCESS;
     };
     static CauldronBehavior REMOVE_SYRUP_FROM_SYRUP_CAULDRON = (state, world, pos, player, hand, stack) -> {
         if (!world.isClient) {
@@ -79,7 +79,7 @@ public class ModCauldronBehaviors implements CauldronBehavior {
             world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
             world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);
         }
-        return ItemActionResult.success(world.isClient);
+        return ActionResult.SUCCESS;
     };
 
     public static void registerBehaviors() {

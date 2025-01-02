@@ -3,7 +3,7 @@ package net.mqzon.mapletree;
 import net.fabricmc.api.ModInitializer;
 
 import net.mqzon.mapletree.block.ModBlocks;
-import net.mqzon.mapletree.entity.ModBoats;
+import net.mqzon.mapletree.boat.ModBoats;
 import net.mqzon.mapletree.item.ModItemGroups;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.particle.ModParticles;

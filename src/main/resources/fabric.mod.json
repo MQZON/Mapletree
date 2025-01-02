@@ -18,6 +18,9 @@
 		"main": [
 			"net.mqzon.mapletree.Mapletree"
 		],
+		"terraform-boat-dfu": [
+			"net.mqzon.mapletree.util.MapleBoatDfu"
+		],
 		"fabric-datagen": [
 			"net.mqzon.mapletree.MapletreeDataGenerator"
 		],

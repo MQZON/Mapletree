@@ -12,6 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.block.WireOrientation;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.util.ModTags;
 import org.jetbrains.annotations.Nullable;
@@ -30,7 +31,7 @@ public class SapCauldron extends FillableLeveledCauldronBlock {
     }
 
     @Override
-    protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+    protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, @Nullable WireOrientation wireOrientation, boolean notify) {
         if (!world.isClient) {
             if (isHeated(world, pos)) {
                 world.setBlockState(pos, state.with(LIT, true));

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.boat.ModBoats;
 import net.mqzon.mapletree.item.ModItems;
 import net.mqzon.mapletree.util.ModTags;
 
@@ -61,8 +62,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SIGNS).add(ModItems.MAPLE_SIGN);
 
-        getOrCreateTagBuilder(ItemTags.BOATS).add(ModItems.MAPLE_BOAT);
-        getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModItems.MAPLE_CHEST_BOAT);
+        getOrCreateTagBuilder(ItemTags.BOATS).add(ModBoats.MAPLE_BOAT);
+        getOrCreateTagBuilder(ItemTags.CHEST_BOATS).add(ModBoats.MAPLE_CHEST_BOAT);
 
         getOrCreateTagBuilder(ItemTags.PIG_FOOD).add(ModItems.GLAZED_CARROTS);
         getOrCreateTagBuilder(ItemTags.RABBIT_FOOD).add(ModItems.GLAZED_CARROTS);

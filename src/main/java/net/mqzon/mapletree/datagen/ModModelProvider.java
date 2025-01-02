@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TexturedModel;
 import net.mqzon.mapletree.block.ModBlocks;
+import net.mqzon.mapletree.boat.ModBoats;
 import net.mqzon.mapletree.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -45,8 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.MAPLE_BOAT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MAPLE_CHEST_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModBoats.MAPLE_BOAT, Models.GENERATED);
+        itemModelGenerator.register(ModBoats.MAPLE_CHEST_BOAT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SAP_BUCKET, Models.GENERATED);
 
