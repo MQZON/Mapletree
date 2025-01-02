@@ -18,15 +18,13 @@ public class ModItems {
             new HangingSignItem(ModBlocks.MAPLE_HANGING_SIGN, ModBlocks.MAPLE_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Mapletree.MOD_ID, "maple_hanging_sign")))));
 
-//    public static final Item MAPLE_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_BOAT_ID, false, false);
-//    public static final Item MAPLE_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.MAPLE_CHEST_BOAT_ID, true, false);
-
     public static Item SAP_BUCKET = registerItem("sap_bucket", new Item(new Item.Settings().maxCount(1)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Mapletree.MOD_ID, "sap_bucket")))));
 
     public static final Item SYRUP_BOTTLE = registerItem("syrup_bottle", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Mapletree.MOD_ID, "syrup_bottle")))
-            .food(ModFoodComponents.SYRUP_BOTTLE, ModConsumableComponents.SYRUP_BOTTLE).maxCount(16).recipeRemainder(Items.GLASS_BOTTLE)));
+            .food(ModFoodComponents.SYRUP_BOTTLE, ModConsumableComponents.SYRUP_BOTTLE).maxCount(16)
+            .recipeRemainder(Items.GLASS_BOTTLE).useRemainder(Items.GLASS_BOTTLE)));
     public static final Item GLAZED_CARROTS = registerItem("glazed_carrots", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Mapletree.MOD_ID, "glazed_carrots")))
             .food(ModFoodComponents.GLAZED_CARROTS, ModConsumableComponents.GLAZED_CARROTS)));
