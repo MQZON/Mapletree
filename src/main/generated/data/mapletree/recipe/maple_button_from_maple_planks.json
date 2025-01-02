@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "item": "mapletree:maple_planks"
-    }
+    "mapletree:maple_planks"
   ],
   "result": {
     "count": 1,

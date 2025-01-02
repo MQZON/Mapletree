@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "sign",
   "key": {
-    "#": {
-      "item": "mapletree:maple_planks"
-    },
-    "X": {
-      "item": "minecraft:stick"
-    }
+    "#": "mapletree:maple_planks",
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",

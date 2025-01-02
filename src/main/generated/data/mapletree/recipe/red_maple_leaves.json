@@ -2,30 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    },
-    {
-      "item": "mapletree:red_maple_leaf_pile"
-    }
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile",
+    "mapletree:red_maple_leaf_pile"
   ],
   "result": {
     "count": 1,

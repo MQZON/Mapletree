@@ -53,13 +53,13 @@ public class ModBlocks {
             ));
 
     public static final Block MAPLE_LEAVES = registerBlock("maple_leaves",
-            new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
+            new ParticleLeavesBlock(10,ModParticles.MAPLE_LEAVES_PARTICLE, AbstractBlock.Settings.copy(Blocks.PALE_OAK_LEAVES)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "maple_leaves")))
-                    .mapColor(MapColor.ORANGE), ModParticles.MAPLE_LEAVES_PARTICLE));
+                    .mapColor(MapColor.ORANGE)));
     public static final Block RED_MAPLE_LEAVES = registerBlock("red_maple_leaves",
-            new MapleLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
+            new ParticleLeavesBlock(10, ModParticles.RED_MAPLE_LEAVES_PARTICLE, AbstractBlock.Settings.copy(Blocks.PALE_OAK_LEAVES)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "red_maple_leaves")))
-                    .mapColor(MapColor.RED), ModParticles.RED_MAPLE_LEAVES_PARTICLE));
+                    .mapColor(MapColor.RED)));
 
     public static final Block MAPLE_LOG = registerBlock("maple_log",
             new MapleLog(AbstractBlock.Settings.copy(Blocks.OAK_LOG).mapColor(MapColor.OAK_TAN).requiresTool()

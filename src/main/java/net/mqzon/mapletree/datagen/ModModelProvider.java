@@ -1,11 +1,11 @@
 package net.mqzon.mapletree.datagen;
 
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TexturedModel;
+import net.minecraft.client.data.BlockStateModelGenerator;
+import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.Models;
+import net.minecraft.client.data.TexturedModel;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.boat.ModBoats;
 import net.mqzon.mapletree.item.ModItems;
@@ -15,7 +15,7 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
-    private static final BlockStateModelGenerator.TintType NOT_TINTED = BlockStateModelGenerator.TintType.NOT_TINTED;
+    private static final BlockStateModelGenerator.CrossType NOT_TINTED = BlockStateModelGenerator.CrossType.NOT_TINTED;
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -46,6 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModBlocks.MAPLE_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.RED_MAPLE_SAPLING.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBoats.MAPLE_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModBoats.MAPLE_CHEST_BOAT, Models.GENERATED);
 

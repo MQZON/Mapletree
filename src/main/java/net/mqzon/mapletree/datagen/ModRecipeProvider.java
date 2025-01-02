@@ -3,8 +3,8 @@ package net.mqzon.mapletree.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.RecipeExporter;
+import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -70,12 +70,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(Items.WHEAT).input(Items.EGG).input(Items.MILK_BUCKET).criterion(HAS_SYRUP, HAS_SYRUP_CRITERION).offerTo(exporter);
             }
         };
-
-
     }
-
-
-
 
     @Override
     public String getName() {

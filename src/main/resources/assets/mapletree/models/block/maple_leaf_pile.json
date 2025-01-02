@@ -1,0 +1,6 @@
+{
+  "parent": "mapletree:block/maple_leaf_pile/maple_leaf_pile_height2",
+  "textures": {
+    "texture": "mapletree:block/maple_leaves"
+  }
+}

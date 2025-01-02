@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "misc",
   "ingredients": [
-    {
-      "item": "mapletree:maple_leaves"
-    }
+    "mapletree:maple_leaves"
   ],
   "result": {
     "count": 8,

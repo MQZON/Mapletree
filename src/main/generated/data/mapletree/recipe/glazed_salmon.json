@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "mapletree:syrup_bottle"
-    },
-    {
-      "item": "minecraft:cooked_salmon"
-    }
+    "mapletree:syrup_bottle",
+    "minecraft:cooked_salmon"
   ],
   "result": {
     "count": 1,
