@@ -2,6 +2,7 @@ package net.mqzon.mapletree.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.mqzon.mapletree.block.ModBlocks;
@@ -16,6 +17,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ModTags.Blocks.HEAT_SOURCES)
+                .add(Blocks.LAVA)
+                .add(Blocks.MAGMA_BLOCK)
+                .add(Blocks.FIRE)
+                .add(Blocks.SOUL_FIRE)
+                .add(Blocks.CAMPFIRE)
+                .add(Blocks.SOUL_CAMPFIRE);
+
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.POTTED_MAPLE_SAPLING)
                 .add(ModBlocks.POTTED_RED_MAPLE_SAPLING);
@@ -76,6 +85,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.WOOL_CARPETS).add(ModBlocks.MAPLE_LEAF_PILE).add(ModBlocks.RED_MAPLE_LEAF_PILE);
 
+        getOrCreateTagBuilder(BlockTags.CAULDRONS)
+                .add(ModBlocks.SAP_CAULDRON)
+                .add(ModBlocks.SYRUP_CAULDRON);
+
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .addTag(ModTags.Blocks.MAPLE_LEAVES)
                 .add(ModBlocks.MAPLE_LEAF_PILE)
@@ -93,5 +106,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.MAPLE_PRESSURE_PLATE)
                 .add(ModBlocks.MAPLE_BUTTON)
                 .addTag(ModTags.Blocks.MAPLE_SIGNS);
+
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.SAP_CAULDRON)
+                .add(ModBlocks.SYRUP_CAULDRON);
     }
 }

@@ -12,6 +12,7 @@ public class ModTags {
         public static final TagKey<Block> MAPLE_LEAVES = createTag("maple_leaves");
         public static final TagKey<Block> MAPLE_LOGS = createTag("maple_logs");
         public static final TagKey<Block> MAPLE_SIGNS = createTag("maple_signs");
+        public static final TagKey<Block> HEAT_SOURCES = createTag("heat_sources");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, name));

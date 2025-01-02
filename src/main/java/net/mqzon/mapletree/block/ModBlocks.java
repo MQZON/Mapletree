@@ -14,11 +14,11 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 import net.mqzon.mapletree.Mapletree;
-import net.mqzon.mapletree.block.custom.LeafPileBlock;
-import net.mqzon.mapletree.block.custom.MapleLeavesBlock;
-import net.mqzon.mapletree.block.custom.MapleLog;
+import net.mqzon.mapletree.block.custom.*;
 import net.mqzon.mapletree.particle.ModParticles;
+import net.mqzon.mapletree.util.ModCauldronBehaviors;
 import net.mqzon.mapletree.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
@@ -103,9 +103,14 @@ public class ModBlocks {
                     AbstractBlock.Settings.copy(Blocks.OAK_WALL_HANGING_SIGN)
                             .mapColor(MapColor.TERRACOTTA_WHITE).dropsLike(MAPLE_HANGING_SIGN)));
 
-    public static final BlockFamily MAPLE_FAMILY =BlockFamilies.register(MAPLE_PLANKS)
+    public static final BlockFamily MAPLE_FAMILY = BlockFamilies.register(MAPLE_PLANKS)
             .sign(MAPLE_STANDING_SIGN, MAPLE_WALL_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();
+
+    public static final Block SAP_CAULDRON = registerBlock("sap_cauldron",
+            new SapCauldron(Biome.Precipitation.NONE, ModCauldronBehaviors.SAP_CAULDRON_BEHAVIOR, AbstractBlock.Settings.copy(Blocks.CAULDRON)));
+    public static final Block SYRUP_CAULDRON = registerBlock("syrup_cauldron",
+            new SyrupCauldron(Biome.Precipitation.NONE, ModCauldronBehaviors.SYRUP_CAULDRON_BEHAVIOR, AbstractBlock.Settings.copy(Blocks.CAULDRON)));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {

@@ -2,6 +2,8 @@ package net.mqzon.mapletree.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.item.ModItems;
@@ -41,5 +43,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.MAPLE_STANDING_SIGN, drops(ModItems.MAPLE_SIGN));
         addDrop(ModBlocks.MAPLE_HANGING_SIGN, drops(ModItems.MAPLE_HANGING_SIGN));
+
+        addDrop(ModBlocks.SAP_CAULDRON, drops(Blocks.CAULDRON));
+        addDrop(ModBlocks.SYRUP_CAULDRON, drops(Blocks.CAULDRON));
     }
 }
