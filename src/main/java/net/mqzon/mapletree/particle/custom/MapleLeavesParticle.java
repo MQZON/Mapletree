@@ -20,7 +20,7 @@ public class MapleLeavesParticle extends LeavesParticle {
         }
 
         public Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-            return new MapleLeavesParticle(world, x, y, z, this.sprites, 0.25F, 2.0F, false, true, 1.0F, 0.0F);
+            return new MapleLeavesParticle(world, x, y, z, this.sprites, 0.015F, 3.0F, true, true, 2.5F, 0.05F);
         }
     }
 }
