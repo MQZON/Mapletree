@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public class ModSaplingGenerators {
     public static final SaplingGenerator MAPLE = new SaplingGenerator(Mapletree.MOD_ID + ":maple",
-            Optional.empty(),
+                        Optional.of(ModConfiguredFeatures.MEGA_MAPLE),
                         Optional.of(ModConfiguredFeatures.MAPLE),
                         Optional.of(ModConfiguredFeatures.MAPLE_BEES_005));
 
