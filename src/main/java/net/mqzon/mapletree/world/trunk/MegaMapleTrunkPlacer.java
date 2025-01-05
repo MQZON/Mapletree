@@ -1,7 +1,8 @@
 package net.mqzon.mapletree.world.trunk;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.util.math.BlockPos;
@@ -12,16 +13,24 @@ import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.TrunkPlacerType;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.BiConsumer;
-import java.util.stream.Stream;
 
 public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
+    public static final MapCodec<MegaMapleTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
+            instance -> fillTrunkPlacerFields(instance).apply(instance, MegaMapleTrunkPlacer::new)
+    );
+
     public MegaMapleTrunkPlacer(int i, int j, int k) {
         super(i, j, k);
+    }
+
+    @Override
+    protected TrunkPlacerType<?> getType() {
+        return ModTrunkPlacerTypes.MEGA_MAPLE_TRUNK_PLACER;
     }
 
     @Override
@@ -37,7 +46,7 @@ public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
         setToDirt(world, replacer, random, startPos.down(), config);
         int topBranchEnd = startPos.getY() + mainTrunkLength;
         int currentHeight = treeHeight - 5;
-        List<MegaMapleTrunkPlacer.BranchPosition> list = Lists.<MegaMapleTrunkPlacer.BranchPosition>newArrayList();
+        List<MegaMapleTrunkPlacer.BranchPosition> list = Lists.newArrayList();
         list.add(new MegaMapleTrunkPlacer.BranchPosition(startPos.up(currentHeight), topBranchEnd));
 
         for (; currentHeight >= 0; currentHeight--) {
@@ -53,7 +62,7 @@ public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
                 if (this.checkBranch(world, blockPos, blockPos2 )) {
                     int r = startPos.getX() - blockPos.getX();
                     int s = startPos.getZ() - blockPos.getZ();
-                    double t = (double)blockPos.getY() - Math.sqrt((double)(r * r + s * s)) * 0.381;
+                    double t = (double)blockPos.getY() - Math.sqrt(r * r + s * s) * 0.381;
                     int u = t > (double)topBranchEnd ? topBranchEnd : (int)t;
                     BlockPos blockPos3 = new BlockPos(startPos.getX(), u, startPos.getZ());
                     if (this.checkBranch(world, blockPos3, blockPos )) {
@@ -65,15 +74,17 @@ public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
 
         this.makeBranch(world, replacer, random, startPos, startPos.up(mainTrunkLength), config);
         this.makeBranches(world, replacer, random, treeHeight, startPos, list, config);
-        List<FoliagePlacer.TreeNode> list2 = Lists.<FoliagePlacer.TreeNode>newArrayList();
+        List<FoliagePlacer.TreeNode> list3 = Lists.<FoliagePlacer.TreeNode>newArrayList();
 
-        for (MegaMapleTrunkPlacer.BranchPosition branchPosition : list) {
-            if (this.isHighEnough(treeHeight, branchPosition.getEndY() - startPos.getY())) {
-                list2.add(branchPosition.node);
-            }
-        }
+//        for (MegaMapleTrunkPlacer.BranchPosition branchPosition : list) {
+//            if (this.isHighEnough(treeHeight, branchPosition.getEndY() - startPos.getY())) {
+//                list2.add(branchPosition.node);
+//            }
+//        }
 
-        return list2;
+//        return list2;
+        list3.add(new FoliagePlacer.TreeNode(startPos.up(treeHeight), 0, false));
+        return list3;
     }
 
     private boolean checkBranch(TestableWorld world, BlockPos startPos, BlockPos branchPos) {
@@ -155,10 +166,10 @@ public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
         for (MegaMapleTrunkPlacer.BranchPosition branchPosition : branchPositions) {
             int endHeight = branchPosition.getEndY();
             BlockPos branchEnd = new BlockPos(startPos.getX(), endHeight, startPos.getZ());
-            boolean branchEndsInTrunk = branchEnd.equals(branchPosition.node.getCenter());
+            boolean branchEndsInTrunk = branchEnd.equals(branchPosition.pos);
             boolean branchIsHighEnough = this.isHighEnough(treeHeight, endHeight - startPos.getY());
             if (!branchEndsInTrunk && branchIsHighEnough) {
-                this.makeBranch(world, replacer, random, branchEnd, branchPosition.node.getCenter(), config);
+                this.makeBranch(world, replacer, random, branchEnd, branchPosition.pos, config);
             }
         }
     }
@@ -185,11 +196,13 @@ public class MegaMapleTrunkPlacer extends LargeOakTrunkPlacer {
     }
 
     static class BranchPosition {
-        final FoliagePlacer.TreeNode node;
+//        final FoliagePlacer.TreeNode node;
+        final BlockPos pos;
         private final int endY;
 
         public BranchPosition(BlockPos pos, int endHeight) {
-            this.node = new FoliagePlacer.TreeNode(pos, 0, false);
+//            this.node = new FoliagePlacer.TreeNode(pos, 0, false);
+            this.pos = pos;
             this.endY = endHeight;
         }
 

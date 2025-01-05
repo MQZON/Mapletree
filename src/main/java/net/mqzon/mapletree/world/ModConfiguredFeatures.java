@@ -19,6 +19,7 @@ import net.minecraft.world.gen.trunk.UpwardsBranchingTrunkPlacer;
 import net.mqzon.mapletree.Mapletree;
 import net.mqzon.mapletree.block.ModBlocks;
 import net.mqzon.mapletree.world.foliage.MapleFoliagePlacer;
+import net.mqzon.mapletree.world.foliage.SpheroidShellPlacer;
 import net.mqzon.mapletree.world.trunk.MegaMapleTrunkPlacer;
 
 import java.util.List;
@@ -51,8 +52,8 @@ public class ModConfiguredFeatures {
         register(context, MEGA_MAPLE, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.MAPLE_LOG),
                 new MegaMapleTrunkPlacer(32, 0, 0),
-                BlockStateProvider.of(Blocks.LIGHT_BLUE_STAINED_GLASS),
-                DefaultMapleFoliage(),
+                BlockStateProvider.of(Blocks.LIME_STAINED_GLASS),
+                DefaultMegaMapleFoliage(),
                 new TwoLayersFeatureSize(1, 1, 2)
         ).decorators(List.of(new BeehiveTreeDecorator(0.05F))).build());
 
@@ -82,6 +83,10 @@ public class ModConfiguredFeatures {
                 0.75F,
                 0F,
                 0F);
+    }
+
+    private static SpheroidShellPlacer DefaultMegaMapleFoliage() {
+        return new SpheroidShellPlacer(ConstantIntProvider.create(16), ConstantIntProvider.create(0), 16);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

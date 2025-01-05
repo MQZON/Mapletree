@@ -11,6 +11,7 @@ import net.mqzon.mapletree.util.ModCauldronBehaviors;
 import net.mqzon.mapletree.util.ModCustomTrades;
 import net.mqzon.mapletree.world.foliage.ModFoliagePlacerTypes;
 import net.mqzon.mapletree.world.gen.ModWorldGeneration;
+import net.mqzon.mapletree.world.trunk.ModTrunkPlacerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +31,7 @@ public class Mapletree implements ModInitializer {
 		ModCustomTrades.registerCustomTrades();
 
 		ModFoliagePlacerTypes.register();
+		ModTrunkPlacerTypes.register();
 		ModWorldGeneration.generateModWorldGen();
 	}
 }
