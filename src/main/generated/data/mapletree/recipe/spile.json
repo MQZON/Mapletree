@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "n": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "nnn"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mapletree:spile"
+  }
+}

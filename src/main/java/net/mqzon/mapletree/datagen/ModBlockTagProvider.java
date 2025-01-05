@@ -108,6 +108,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(ModTags.Blocks.MAPLE_SIGNS);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.SPILE)
                 .add(ModBlocks.SAP_CAULDRON)
                 .add(ModBlocks.SYRUP_CAULDRON);
     }

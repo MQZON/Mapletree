@@ -62,6 +62,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBoatRecipe(ModBoats.MAPLE_BOAT, ModBlocks.MAPLE_PLANKS);
                 offerChestBoatRecipe(ModBoats.MAPLE_CHEST_BOAT, ModBoats.MAPLE_BOAT);
 
+                createShaped(RecipeCategory.TOOLS, ModBlocks.SPILE, 1)
+                        .pattern("nnn").input('n',Ingredient.ofItem(Items.IRON_NUGGET))
+                        .criterion(HAS_MAPLE_PLANKS, HAS_MAPLE_PLANKS_CRITERION).offerTo(exporter);
+
                 createShapeless(RecipeCategory.FOOD, ModItems.GLAZED_CARROTS, 3).input(ModItems.SYRUP_BOTTLE)
                         .input(Items.CARROT, 3).criterion(HAS_SYRUP, HAS_SYRUP_CRITERION).offerTo(exporter);
                 createShapeless(RecipeCategory.FOOD, ModItems.GLAZED_SALMON).input(ModItems.SYRUP_BOTTLE)

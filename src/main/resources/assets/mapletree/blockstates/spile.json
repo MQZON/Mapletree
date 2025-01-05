@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mapletree:block/spile",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mapletree:block/spile"
+    },
+    "facing=south": {
+      "model": "mapletree:block/spile",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mapletree:block/spile",
+      "y": 270
+    }
+  }
+}

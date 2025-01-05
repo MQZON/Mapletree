@@ -1,9 +1,6 @@
 {
   "itemgroup.mapletree.maple_group": "Mapletree",
 
-  "item.mapletree.syrup_bottle": "Syrup Bottle",
-  "item.mapletree.sap_bucket": "Sap Bucket",
-
   "item.mapletree.maple_sapling": "Maple Sapling",
   "item.mapletree.red_maple_sapling": "Red Maple Sapling",
   "item.mapletree.potted_maple_sapling": "Potted Maple Sapling",
@@ -35,6 +32,10 @@
 
   "item.mapletree.maple_boat": "Maple Boat",
   "item.mapletree.maple_chest_boat": "Maple Boat with Chest",
+
+  "item.mapletree.spile": "Spile",
+  "item.mapletree.sap_bucket": "Sap Bucket",
+  "item.mapletree.syrup_bottle": "Syrup Bottle",
 
   "item.mapletree.glazed_carrots": "Glazed Carrots",
   "item.mapletree.glazed_salmon": "Glazed Salmon",

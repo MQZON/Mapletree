@@ -44,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModBoats.MAPLE_BOAT);
                         entries.add(ModBoats.MAPLE_CHEST_BOAT);
 
+                        entries.add(ModBlocks.SPILE);
                         entries.add(ModItems.SAP_BUCKET);
 
                         entries.add(ModItems.SYRUP_BOTTLE);
@@ -90,6 +91,7 @@ public class ModItemGroups {
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.SPILE);
             entries.add(ModItems.MAPLE_SIGN);
             entries.add(ModItems.MAPLE_HANGING_SIGN);
         });

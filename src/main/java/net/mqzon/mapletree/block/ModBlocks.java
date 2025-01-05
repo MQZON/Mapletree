@@ -146,6 +146,10 @@ public class ModBlocks {
             .sign(MAPLE_STANDING_SIGN, MAPLE_WALL_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();
 
+    public static final Block SPILE = registerBlock("spile",
+            new SpileBlock(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).requiresTool()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "spile")))));
+
     public static final Block SAP_CAULDRON = registerBlock("sap_cauldron",
             new SapCauldron(Biome.Precipitation.NONE, ModCauldronBehaviors.SAP_CAULDRON_BEHAVIOR, AbstractBlock.Settings.copy(Blocks.CAULDRON)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Mapletree.MOD_ID, "sap_cauldron")))

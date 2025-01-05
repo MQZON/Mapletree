@@ -51,6 +51,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModBoats.MAPLE_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModBoats.MAPLE_CHEST_BOAT, Models.GENERATED);
 
+//        itemModelGenerator.register(ModBlocks.SPILE.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModItems.SAP_BUCKET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SYRUP_BOTTLE, Models.GENERATED);
