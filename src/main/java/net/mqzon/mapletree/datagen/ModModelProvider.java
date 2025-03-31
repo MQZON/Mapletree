@@ -25,9 +25,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(ModBlocks.MAPLE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.RED_MAPLE_LEAVES, TexturedModel.LEAVES);
 
-        blockStateModelGenerator.registerLog(ModBlocks.MAPLE_LOG)
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.MAPLE_LOG)
                 .log(ModBlocks.MAPLE_LOG).wood(ModBlocks.MAPLE_WOOD);
-        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MAPLE_LOG)
+        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_MAPLE_LOG)
                 .log(ModBlocks.STRIPPED_MAPLE_LOG).wood(ModBlocks.STRIPPED_MAPLE_WOOD);
 
         BlockStateModelGenerator.BlockTexturePool maplePool =

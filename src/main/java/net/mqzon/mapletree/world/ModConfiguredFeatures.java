@@ -1,6 +1,5 @@
 package net.mqzon.mapletree.world;
 
-import net.minecraft.block.Block;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;

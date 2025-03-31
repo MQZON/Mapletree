@@ -11,8 +11,7 @@ import net.minecraft.world.World;
 public class LeafPileBlock extends SnowBlock {
     public LeafPileBlock(Settings settings) { super(settings); }
 
-    @Override
-    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
         entity.handleFallDamage(fallDistance, 0.2F, world.getDamageSources().fall());
     }
 
